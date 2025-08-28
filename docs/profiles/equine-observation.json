@@ -7,7 +7,7 @@
   "title": "Equine Observation Profile",
   "status": "draft",
   "date": "2025-08-27",
-  "publisher": "Equine Data Standard Initiative",
+  "publisher": "Equine Data Standard (EQDS)",
   "description": "Profile for equine clinical observations, training metrics, and competition performance",
   "fhirVersion": "5.0.0",
   "kind": "resource",
