@@ -1,9 +1,9 @@
 # FHIR Implementation Guide for Equine Healthcare (Equine Data Standard)
 
-**Version:** 1.1.0
+**Version:** 1.1.0  
 **Status:** Draft  
 **Date:** 2025-08-27  
-**Publisher:** Equine Data Standard (EQDS)
+**Publisher:** Equine Data Standard (EQDS)  
 **Contact:** equinedatastandard@gmail.com  
 **Website:** https://eqds.org  
 **License:** CC0-1.0  
