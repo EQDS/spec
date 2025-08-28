@@ -117,73 +117,105 @@ table tr:hover {
   background-color: #f5f5f5;
 }
 
-/* Resource cards for homepage */
-.resource-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-}
-
-.resource-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.resource-card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.resource-card h3 {
+/* Resource sections styling */
+#main_content h3 {
   color: var(--eqds-primary);
-  margin-top: 0;
-  margin-bottom: 15px;
-  border-bottom: 2px solid var(--eqds-light);
-  padding-bottom: 8px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 15px 20px;
+  margin: 30px 0 15px 0;
+  border-left: 5px solid var(--eqds-secondary);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: 600;
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
 }
 
-.resource-card ul {
-  margin: 0;
+#main_content h3:hover {
+  background: linear-gradient(135deg, #e9ecef, #dee2e6);
+  transform: translateX(2px);
+  transition: all 0.3s ease;
+}
+
+/* Style the sections under FHIR Resources */
+#main_content h2 + h3 {
+  margin-top: 20px;
+}
+
+/* Enhanced list styling for resource links - only apply to lists following h3 headers */
+#main_content h3 + ul {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+#main_content h3 + ul li {
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f8f9fa;
+  transition: background-color 0.2s ease;
+  list-style-type: none;
+  position: relative;
   padding-left: 20px;
 }
 
-.resource-card li {
+#main_content h3 + ul li:before {
+  content: "▶";
+  color: var(--eqds-secondary);
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+#main_content h3 + ul li:last-child {
+  border-bottom: none;
+}
+
+#main_content h3 + ul li:hover {
+  background-color: #f8f9fa;
+  padding-left: 30px;
+  margin-left: -10px;
+  border-radius: 4px;
+}
+
+#main_content h3 + ul li:hover:before {
+  color: var(--eqds-primary);
+}
+
+/* Special styling for resource links in cards */
+#main_content h3 + ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--eqds-secondary);
+}
+
+#main_content h3 + ul li a:hover {
+  color: var(--eqds-primary);
+  text-decoration: underline;
+}
+
+/* Default list styling for other lists */
+#main_content ul {
+  padding-left: 20px;
+}
+
+#main_content ul li {
   margin-bottom: 8px;
 }
 
-/* Badges and labels */
-.badge {
-  display: inline-block;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-profile {
-  background-color: var(--eqds-secondary);
-  color: white;
-}
-
-.badge-example {
-  background-color: #27ae60;
-  color: white;
-}
-
-.badge-codesystem {
-  background-color: #f39c12;
-  color: white;
-}
-
-.badge-extension {
-  background-color: #9b59b6;
-  color: white;
+/* Emoji icons in headers get special styling */
+#main_content h3:before {
+  margin-right: 10px;
+  font-size: 1.2em;
 }
 
 /* Alert boxes */
@@ -226,10 +258,6 @@ table tr:hover {
     padding: 8px;
   }
   
-  .resource-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
 }
 
 /* Print styles */

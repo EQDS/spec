@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home - EQDS Equine Data Standard
+title: Equine Data Standard (EQDS)
 description: Open FHIR specification for equine health data interoperability
 ---
 
@@ -24,10 +24,7 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 
 ## FHIR Resources
 
-<div class="resource-grid">
-
-<div class="resource-card">
-<h3><span class="badge badge-profile">Profiles</span> Core Resources</h3>
+### 🏥 Profiles - Core Resources
 
 - [Equine Patient](profiles/equine-patient.json) - Core equine patient profile
 - [Equine Observation](profiles/equine-observation.json) - Clinical observations, training, and competition data
@@ -36,10 +33,8 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Equine Procedure](profiles/equine-procedure.json) - Veterinary procedures
 - [Equine Practitioner](profiles/equine-practitioner.json) - Veterinary practitioners
 - [Equine Organization](profiles/equine-organization.json) - Clinics, facilities, and venues
-</div>
 
-<div class="resource-card">
-<h3><span class="badge badge-codesystem">Code Systems</span> Terminologies</h3>
+### 📚 Code Systems - Terminologies
 
 - [Equine Sex](codesystems/equine-sex.json) - Mare, stallion, gelding, etc.
 - [Breed Codes](codesystems/breed-codes.json) - Horse breed classifications
@@ -47,20 +42,16 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Discipline Codes](codesystems/discipline-codes.json) - Equestrian disciplines
 - [Competition Organizations](codesystems/competition-orgs.json) - FEI, USEF, etc.
 - [Veterinary Medications](codesystems/veterinary-medications.json) - Common equine medications
-</div>
 
-<div class="resource-card">
-<h3><span class="badge badge-extension">Extensions</span> Equine-Specific Data</h3>
+### 🔧 Extensions - Equine-Specific Data
 
 - [Ownership Extension](extensions/ownership.json) - Track fractional ownership
 - [Breeding Info Extension](extensions/breeding-info.json) - Sire and dam information
 - [Equine Color Extension](extensions/equine-color.json) - Color and markings
 - [Withdrawal Time Extension](extensions/withdrawal-time.json) - Competition drug withdrawal
 - [Next Due Extension](extensions/next-due.json) - Vaccination schedules
-</div>
 
-<div class="resource-card">
-<h3><span class="badge badge-example">Examples</span> Implementation Samples</h3>
+### 📝 Examples - Implementation Samples
 
 - [Patient Example](samples/patient-example.json) - Complete equine patient record
 - [Lameness Observation](samples/observation-lameness.json) - AAEP lameness grading
@@ -70,14 +61,15 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Vaccination Record](samples/immunization-example.json) - Immunization example
 - [Coggins Test](samples/coggins-test.json) - EIA test result
 - [Medication Administration](samples/medication-administration.json) - Drug administration with withdrawal
-</div>
 
-</div>
+### 📊 Value Sets
 
-### Additional Resources
+- [Equine Sex ValueSet](valuesets/equine-sex.json)
+- [Breed Codes ValueSet](valuesets/breed-codes.json)
+- [Competition Organizations ValueSet](valuesets/competition-organizations.json)
 
-**Value Sets:**
-- [Equine Sex ValueSet](valuesets/equine-sex.json) | [Breed Codes ValueSet](valuesets/breed-codes.json) | [Competition Organizations ValueSet](valuesets/competition-organizations.json)
+### 🔍 Search Parameters
 
-**Search Parameters:**
-- [Patient Breed Search](searchparameters/patient-breed.json) | [Patient Microchip Search](searchparameters/patient-microchip.json) | [Patient Owner Search](searchparameters/patient-owner.json)
+- [Patient Breed Search](searchparameters/patient-breed.json)
+- [Patient Microchip Search](searchparameters/patient-microchip.json)
+- [Patient Owner Search](searchparameters/patient-owner.json)
