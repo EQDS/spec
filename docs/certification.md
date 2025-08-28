@@ -1,3 +1,9 @@
+---
+layout: default
+title: Certification Process - EQDS
+description: How vendors can certify their systems as EQDS compliant
+---
+
 # EQDS Certification
 
 Vendors can certify their systems as **EQDS Compliant**.

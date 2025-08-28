@@ -1,0 +1,255 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom styles for EQDS */
+.inner {
+  max-width: 1200px;  /* Wider content area for documentation */
+}
+
+/* EQDS Brand Colors */
+:root {
+  --eqds-primary: #2c3e50;
+  --eqds-secondary: #3498db;
+  --eqds-accent: #e74c3c;
+  --eqds-light: #ecf0f1;
+  --eqds-dark: #34495e;
+}
+
+/* Header customization */
+#header_wrap {
+  background: linear-gradient(to bottom, var(--eqds-primary), var(--eqds-dark));
+}
+
+#project_title {
+  color: white;
+  font-weight: 700;
+}
+
+#project_tagline {
+  color: var(--eqds-light);
+  font-weight: 300;
+}
+
+/* Navigation improvements */
+#main_content h1 {
+  color: var(--eqds-primary);
+  border-bottom: 3px solid var(--eqds-secondary);
+  padding-bottom: 10px;
+}
+
+#main_content h2 {
+  color: var(--eqds-dark);
+  border-bottom: 2px solid var(--eqds-secondary);
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+#main_content h3 {
+  color: var(--eqds-dark);
+  margin-top: 25px;
+}
+
+/* Links */
+a {
+  color: var(--eqds-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--eqds-primary);
+  text-decoration: underline;
+}
+
+/* Code blocks and JSON styling */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Table styling for specifications */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table th {
+  background-color: var(--eqds-primary);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Resource cards for homepage */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.resource-card h3 {
+  color: var(--eqds-primary);
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--eqds-light);
+  padding-bottom: 8px;
+}
+
+.resource-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.resource-card li {
+  margin-bottom: 8px;
+}
+
+/* Badges and labels */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-profile {
+  background-color: var(--eqds-secondary);
+  color: white;
+}
+
+.badge-example {
+  background-color: #27ae60;
+  color: white;
+}
+
+.badge-codesystem {
+  background-color: #f39c12;
+  color: white;
+}
+
+.badge-extension {
+  background-color: #9b59b6;
+  color: white;
+}
+
+/* Alert boxes */
+.alert {
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: var(--eqds-secondary);
+  color: #31708f;
+}
+
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #f39c12;
+  color: #8a6d3b;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #27ae60;
+  color: #3c763d;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .inner {
+    padding: 20px 10px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  table th, table td {
+    padding: 8px;
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Print styles */
+@media print {
+  #header_wrap,
+  #fork_me_banner {
+    display: none;
+  }
+  
+  #main_content {
+    margin-top: 0;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  pre {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+}

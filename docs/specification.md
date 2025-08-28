@@ -1,3 +1,9 @@
+---
+layout: default
+title: Full Specification - EQDS
+description: Complete FHIR Implementation Guide for Equine Healthcare
+---
+
 # FHIR Implementation Guide for Equine Healthcare (Equine Data Standard)
 
 **Version:** 1.1.0  
