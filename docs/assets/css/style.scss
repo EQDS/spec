@@ -142,8 +142,8 @@ table tr:hover {
 }
 
 .card h3 {
-  background: linear-gradient(135deg, var(--eqds-primary), var(--eqds-dark));
-  color: white;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: var(--eqds-primary);
   padding: 20px 25px;
   margin: 0;
   font-size: 1.15em;
@@ -164,9 +164,12 @@ table tr:hover {
 }
 
 .card ul {
-  list-style: none;
+  list-style: none !important;
+  list-style-type: none !important;
   padding: 25px;
   margin: 0;
+  font-size: 14px;
+  color: #2c3e50;
 }
 
 .card li {
@@ -174,6 +177,11 @@ table tr:hover {
   border-bottom: 1px solid #f0f2f5;
   transition: all 0.2s ease;
   position: relative;
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.5;
+  list-style: none !important;
+  list-style-type: none !important;
 }
 
 .card li:last-child {
@@ -189,16 +197,23 @@ table tr:hover {
   border-radius: 6px;
 }
 
+/* Remove default arrows from all list items */
 .card li:before {
+  display: none;
+}
+
+/* Arrow indicators only for links */
+.card li a:before {
   content: "▸";
   color: var(--eqds-secondary);
   font-weight: bold;
   margin-right: 10px;
   transition: all 0.2s ease;
   opacity: 0.6;
+  display: inline;
 }
 
-.card li:hover:before {
+.card li:hover a:before {
   color: var(--eqds-primary);
   opacity: 1;
   transform: translateX(3px);
@@ -219,9 +234,36 @@ table tr:hover {
 
 .card p {
   margin: 0 0 15px 0;
-  color: #666;
-  font-size: 0.95em;
+  color: #2c3e50;
+  font-size: 14px;
   line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Global font size improvements and list styling */
+#main_content {
+  font-size: 14px;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Remove all default list bullets globally */
+#main_content ul {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#main_content p {
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+#main_content li {
+  font-size: 14px;
+  color: #2c3e50;
+  list-style: none;
+  list-style-type: none;
 }
 
 /* Single column layout for smaller screens */
@@ -243,6 +285,7 @@ table tr:hover {
   
   .card ul {
     padding: 20px;
+    font-size: 14px;
   }
   
   .card li:hover {
