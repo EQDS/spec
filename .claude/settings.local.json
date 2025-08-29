@@ -3,7 +3,11 @@
     "allow": [
       "WebFetch(domain:github.com)",
       "WebFetch(domain:eqds.org)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "Bash(bundle install:*)",
+      "WebFetch(domain:docs.github.com)",
+      "WebFetch(domain:pages-themes.github.io)"
     ],
     "deny": [],
     "ask": []

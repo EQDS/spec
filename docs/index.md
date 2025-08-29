@@ -9,7 +9,7 @@ description: Open FHIR specification for equine data interoperability
       <img src="assets/css/eqds-official-badge.png" alt="EQDS Official Badge" style="width:200px;" />
     </div>
   </div>
-  <h1 style="border-bottom:none">Welcome to <strong>EQDS</strong>, the international open standard for equine data interoperability</h1>
+  <h1 style="border-bottom:none !important">Welcome to <strong>EQDS</strong>, the international open standard for equine data interoperability</h1>
 </div>
 
 
