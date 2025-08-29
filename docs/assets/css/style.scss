@@ -3,6 +3,22 @@
 
 @import "{{ site.theme }}";
 
+/* Override base theme's light gray colors for better contrast */
+body {
+  color: #2c3e50 !important;
+}
+
+/* Ensure all paragraph text has proper contrast */
+p {
+  color: #2c3e50 !important;
+}
+
+/* Fix strong/bold text contrast */
+strong, b {
+  color: #2c3e50 !important;
+  font-weight: 600;
+}
+
 /* Custom styles for EQDS */
 .inner {
   max-width: 1200px;  /* Wider content area for documentation */
@@ -64,6 +80,7 @@ a:hover {
 /* Code blocks and JSON styling */
 pre {
   background-color: #f8f8f8;
+  color: #2c3e50 !important;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 15px;
@@ -74,6 +91,7 @@ pre {
 
 code {
   background-color: #f4f4f4;
+  color: #2c3e50 !important;
   padding: 2px 4px;
   border-radius: 3px;
   font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
@@ -81,6 +99,7 @@ code {
 
 pre code {
   background: none;
+  color: #2c3e50 !important;
   padding: 0;
   border-radius: 0;
 }
@@ -106,6 +125,7 @@ table td {
   padding: 10px 12px;
   border: 1px solid #ddd;
   vertical-align: top;
+  color: #2c3e50 !important;
 }
 
 table tr:nth-child(even) {
@@ -249,8 +269,20 @@ table tr:hover {
 /* Global font size improvements and list styling */
 #main_content {
   font-size: 14px;
-  color: #2c3e50;
+  color: #2c3e50 !important;
   line-height: 1.6;
+}
+
+/* Comprehensive contrast overrides */
+#main_content * {
+  color: inherit;
+}
+
+/* Ensure all text elements have proper contrast */
+#main_content div,
+#main_content span,
+#main_content section {
+  color: #2c3e50 !important;
 }
 
 /* Remove all default list bullets globally */
