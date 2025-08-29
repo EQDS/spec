@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Equine Data Standard
-description: Open FHIR specification for equine health data interoperability
+description: Open FHIR specification for equine data interoperability
 ---
 <div style="text-align:center;">
   <div class="eqds-header" style="display:flex; justify-content:center; align-items:center;">
@@ -9,7 +9,7 @@ description: Open FHIR specification for equine health data interoperability
       <img src="assets/css/eqds-official-badge.png" alt="EQDS Official Badge" style="width:200px;" />
     </div>
   </div>
-  <h1 style="border-bottom:none">Welcome to <strong>EQDS</strong>, the international open standard for equine health interoperability.</h1>
+  <h1 style="border-bottom:none">Welcome to <strong>EQDS</strong>, the international open standard for equine data interoperability</h1>
 </div>
 
 
@@ -24,8 +24,8 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 
 ## Quick Links
 - [Full Specification](specification)
-- [Certification Process](certification)
-- [Certified Vendors](vendors)
+<!-- - [Certification Process](certification) -->
+<!-- - [Certified Vendors](vendors) -->
 
 ## FHIR Resources
 
