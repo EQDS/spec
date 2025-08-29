@@ -431,18 +431,95 @@ strong, b {
     color: #3c763d !important;
 }
 
+/* Responsive table wrapper for mobile */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.table-responsive table {
+    margin: 0; /* Override default margin */
+    min-width: 600px; /* Ensure table doesn't collapse too much */
+    box-shadow: none; /* Remove shadow from table since container has it */
+}
+
+/* Mobile scroll indicators */
+@media (max-width: 768px) {
+    .table-responsive::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 20px;
+        background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+        pointer-events: none;
+        border-radius: 0 6px 6px 0;
+    }
+    
+    /* Add subtle shadow to indicate scrollable content */
+    .table-responsive {
+        border-right: 1px solid #e9ecef;
+    }
+    
+    /* Scroll hint for better UX */
+    .table-responsive::before {
+        content: "← Scroll →";
+        position: absolute;
+        top: -25px;
+        right: 0;
+        font-size: 11px;
+        color: #6c757d;
+        opacity: 0.7;
+        font-weight: 500;
+    }
+}
+
 /* Responsive design improvements */
 @media (max-width: 768px) {
     .inner {
         padding: 20px 10px !important;
     }
     
+    /* Wrap tables automatically on mobile */
+    table:not(.table-responsive table) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    
     table {
         font-size: 12px !important;
+        min-width: 500px; /* Prevent table from being too narrow */
     }
     
     table th, table td {
-        padding: 8px !important;
+        padding: 6px 4px !important; /* Reduce padding more on mobile */
+        min-width: 80px; /* Ensure columns don't get too narrow */
+    }
+    
+    /* Special handling for simple tables like Change Log */
+    table th:first-child,
+    table td:first-child {
+        min-width: 60px; /* Version column */
+    }
+    
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        min-width: 80px; /* Date column */
+    }
+    
+    table th:last-child,
+    table td:last-child {
+        min-width: 200px; /* Description column gets more space */
+        white-space: normal; /* Allow text wrapping in description */
     }
 }
 
