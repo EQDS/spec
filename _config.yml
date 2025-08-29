@@ -15,17 +15,27 @@ markdown: kramdown
 highlighter: rouge
 timezone: America/New_York
 
+# GitHub Pages optimization
+incremental: false
+future: false
+show_excerpts: false
+keep_files: []
+
 # Exclude from processing
 exclude:
   - README.md
   - LICENSE
   - Gemfile
   - Gemfile.lock
+  - Gemfile.save
   - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - private/
+  - .github/
+  - _site/
 
 # Collections for organized content
 collections:
