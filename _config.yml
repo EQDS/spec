@@ -3,7 +3,9 @@
 plugins:
   - jekyll-remote-theme
   - jekyll-redirect-from
+  - jekyll-seo-tag
 remote_theme: pages-themes/tactile@v0.2.0
+theme: null
 
 # Site settings
 title: EQDS — Equine Data Standard
