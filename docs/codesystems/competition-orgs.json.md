@@ -1,0 +1,22 @@
+---
+redirect_from:
+  - /CodeSystem/competition-orgs
+layout: none
+permalink: /docs/codesystems/competition-orgs.json
+---
+{
+  "resourceType": "CodeSystem",
+  "id": "competition-orgs",
+  "url": "https://eqds.org/CodeSystem/competition-orgs",
+  "name": "CompetitionOrganizations",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {"code": "fei", "display": "Fédération Équestre Internationale"},
+    {"code": "usef", "display": "United States Equestrian Federation"},
+    {"code": "ec", "display": "Equestrian Canada"},
+    {"code": "nrha", "display": "National Reining Horse Association"},
+    {"code": "aqha", "display": "American Quarter Horse Association"},
+    {"code": "ncha", "display": "National Cutting Horse Association"}
+  ]
+}

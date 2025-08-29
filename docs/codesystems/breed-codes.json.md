@@ -1,0 +1,22 @@
+---
+redirect_from:
+  - /CodeSystem/breed-codes
+layout: none
+permalink: /docs/codesystems/breed-codes.json
+---
+{
+  "resourceType": "CodeSystem",
+  "id": "breed-codes",
+  "url": "https://eqds.org/CodeSystem/breed-codes",
+  "name": "EquineBreedCodeSystem",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {"code": "QH", "display": "Quarter Horse", "definition": "American Quarter Horse"},
+    {"code": "TB", "display": "Thoroughbred", "definition": "Thoroughbred"},
+    {"code": "AR", "display": "Arabian", "definition": "Arabian Horse"},
+    {"code": "PT", "display": "Paint", "definition": "American Paint Horse"},
+    {"code": "AP", "display": "Appaloosa", "definition": "Appaloosa"},
+    {"code": "WB", "display": "Warmblood", "definition": "Sport Horse/Warmblood"}
+  ]
+}

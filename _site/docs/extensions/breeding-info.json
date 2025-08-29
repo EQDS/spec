@@ -1,94 +1,94 @@
-{
-  "resourceType": "StructureDefinition",
-  "id": "breeding-info",
-  "url": "https://eqds.org/StructureDefinition/breeding-info",
-  "version": "1.0.0",
-  "name": "BreedingInfoExtension",
-  "title": "Breeding Information Extension",
-  "status": "draft",
-  "date": "2025-08-27",
-  "publisher": "Equine Data Standard (EQDS)",
-  "description": "Extension for tracking equine breeding information including sire and dam",
-  "fhirVersion": "5.0.0",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+<p>{
+  “resourceType”: “StructureDefinition”,
+  “id”: “breeding-info”,
+  “url”: “https://eqds.org/StructureDefinition/breeding-info”,
+  “version”: “1.0.0”,
+  “name”: “BreedingInfoExtension”,
+  “title”: “Breeding Information Extension”,
+  “status”: “draft”,
+  “date”: “2025-08-27”,
+  “publisher”: “Equine Data Standard (EQDS)”,
+  “description”: “Extension for tracking equine breeding information including sire and dam”,
+  “fhirVersion”: “5.0.0”,
+  “kind”: “complex-type”,
+  “abstract”: false,
+  “context”: [
     {
-      "type": "element",
-      "expression": "Patient"
+      “type”: “element”,
+      “expression”: “Patient”
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
+  “type”: “Extension”,
+  “baseDefinition”: “http://hl7.org/fhir/StructureDefinition/Extension”,
+  “derivation”: “constraint”,
+  “differential”: {
+    “element”: [
       {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Breeding information",
-        "definition": "Information about horse breeding including sire, dam, and registration"
+        “id”: “Extension”,
+        “path”: “Extension”,
+        “short”: “Breeding information”,
+        “definition”: “Information about horse breeding including sire, dam, and registration”
       },
       {
-        "id": "Extension.extension:sire",
-        "path": "Extension.extension",
-        "sliceName": "sire",
-        "min": 0,
-        "max": "1"
+        “id”: “Extension.extension:sire”,
+        “path”: “Extension.extension”,
+        “sliceName”: “sire”,
+        “min”: 0,
+        “max”: “1”
       },
       {
-        "id": "Extension.extension:sire.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "sire"
+        “id”: “Extension.extension:sire.url”,
+        “path”: “Extension.extension.url”,
+        “fixedUri”: “sire”
       },
       {
-        "id": "Extension.extension:sire.value[x]",
-        "path": "Extension.extension.value[x]",
-        "type": [
+        “id”: “Extension.extension:sire.value[x]”,
+        “path”: “Extension.extension.value[x]”,
+        “type”: [
           {
-            "code": "Reference",
-            "targetProfile": ["https://eqds.org/StructureDefinition/equine-patient"]
+            “code”: “Reference”,
+            “targetProfile”: [“https://eqds.org/StructureDefinition/equine-patient”]
           },
           {
-            "code": "string"
+            “code”: “string”
           }
         ]
       },
       {
-        "id": "Extension.extension:dam",
-        "path": "Extension.extension",
-        "sliceName": "dam",
-        "min": 0,
-        "max": "1"
+        “id”: “Extension.extension:dam”,
+        “path”: “Extension.extension”,
+        “sliceName”: “dam”,
+        “min”: 0,
+        “max”: “1”
       },
       {
-        "id": "Extension.extension:dam.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "dam"
+        “id”: “Extension.extension:dam.url”,
+        “path”: “Extension.extension.url”,
+        “fixedUri”: “dam”
       },
       {
-        "id": "Extension.extension:dam.value[x]",
-        "path": "Extension.extension.value[x]",
-        "type": [
+        “id”: “Extension.extension:dam.value[x]”,
+        “path”: “Extension.extension.value[x]”,
+        “type”: [
           {
-            "code": "Reference",
-            "targetProfile": ["https://eqds.org/StructureDefinition/equine-patient"]
+            “code”: “Reference”,
+            “targetProfile”: [“https://eqds.org/StructureDefinition/equine-patient”]
           },
           {
-            "code": "string"
+            “code”: “string”
           }
         ]
       },
       {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://eqds.org/StructureDefinition/breeding-info"
+        “id”: “Extension.url”,
+        “path”: “Extension.url”,
+        “fixedUri”: “https://eqds.org/StructureDefinition/breeding-info”
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "max": "0"
+        “id”: “Extension.value[x]”,
+        “path”: “Extension.value[x]”,
+        “max”: “0”
       }
     ]
   }
-}
+}</p>

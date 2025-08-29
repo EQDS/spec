@@ -1,0 +1,48 @@
+---
+redirect_from:
+  - /StructureDefinition/equine-immunization
+layout: none
+permalink: /docs/profiles/equine-immunization.json
+---
+
+{
+  "resourceType": "StructureDefinition",
+  "id": "equine-immunization",
+  "url": "https://eqds.org/StructureDefinition/equine-immunization",
+  "version": "1.0.0",
+  "name": "EquineImmunization",
+  "title": "Equine Immunization Profile",
+  "status": "draft",
+  "date": "2025-08-27",
+  "publisher": "Equine Data Standard (EQDS)",
+  "description": "Profile for equine immunizations and vaccinations",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "type": [{
+          "code": "Reference",
+          "targetProfile": ["https://eqds.org/StructureDefinition/equine-patient"]
+        }]
+      },
+      {
+        "id": "Immunization.extension:next-due",
+        "path": "Immunization.extension",
+        "sliceName": "next-due",
+        "min": 0,
+        "max": "1",
+        "type": [{
+          "code": "Extension",
+          "profile": ["https://eqds.org/StructureDefinition/next-due"]
+        }]
+      }
+    ]
+  }
+}

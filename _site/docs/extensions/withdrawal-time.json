@@ -1,92 +1,92 @@
-{
-  "resourceType": "StructureDefinition",
-  "id": "withdrawal-time",
-  "url": "https://eqds.org/StructureDefinition/withdrawal-time",
-  "version": "1.0.0",
-  "name": "WithdrawalTimeExtension",
-  "title": "Withdrawal Time Extension",
-  "status": "draft",
-  "date": "2025-08-27",
-  "publisher": "Equine Data Standard (EQDS)",
-  "description": "Extension for tracking medication withdrawal times for competition",
-  "fhirVersion": "5.0.0",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
+<p>{
+  “resourceType”: “StructureDefinition”,
+  “id”: “withdrawal-time”,
+  “url”: “https://eqds.org/StructureDefinition/withdrawal-time”,
+  “version”: “1.0.0”,
+  “name”: “WithdrawalTimeExtension”,
+  “title”: “Withdrawal Time Extension”,
+  “status”: “draft”,
+  “date”: “2025-08-27”,
+  “publisher”: “Equine Data Standard (EQDS)”,
+  “description”: “Extension for tracking medication withdrawal times for competition”,
+  “fhirVersion”: “5.0.0”,
+  “kind”: “complex-type”,
+  “abstract”: false,
+  “context”: [
     {
-      "type": "element",
-      "expression": "MedicationAdministration"
+      “type”: “element”,
+      “expression”: “MedicationAdministration”
     }
   ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
+  “type”: “Extension”,
+  “baseDefinition”: “http://hl7.org/fhir/StructureDefinition/Extension”,
+  “derivation”: “constraint”,
+  “differential”: {
+    “element”: [
       {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Competition withdrawal time",
-        "definition": "Information about withdrawal times for different competition organizations"
+        “id”: “Extension”,
+        “path”: “Extension”,
+        “short”: “Competition withdrawal time”,
+        “definition”: “Information about withdrawal times for different competition organizations”
       },
       {
-        "id": "Extension.extension:organization",
-        "path": "Extension.extension",
-        "sliceName": "organization",
-        "min": 1,
-        "max": "1"
+        “id”: “Extension.extension:organization”,
+        “path”: “Extension.extension”,
+        “sliceName”: “organization”,
+        “min”: 1,
+        “max”: “1”
       },
       {
-        "id": "Extension.extension:organization.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "organization"
+        “id”: “Extension.extension:organization.url”,
+        “path”: “Extension.extension.url”,
+        “fixedUri”: “organization”
       },
       {
-        "id": "Extension.extension:organization.valueCodeableConcept",
-        "path": "Extension.extension.valueCodeableConcept",
-        "min": 1,
-        "type": [
+        “id”: “Extension.extension:organization.valueCodeableConcept”,
+        “path”: “Extension.extension.valueCodeableConcept”,
+        “min”: 1,
+        “type”: [
           {
-            "code": "CodeableConcept"
+            “code”: “CodeableConcept”
           }
         ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://eqds.org/ValueSet/competition-organizations"
+        “binding”: {
+          “strength”: “required”,
+          “valueSet”: “https://eqds.org/ValueSet/competition-organizations”
         }
       },
       {
-        "id": "Extension.extension:duration",
-        "path": "Extension.extension",
-        "sliceName": "duration",
-        "min": 1,
-        "max": "1"
+        “id”: “Extension.extension:duration”,
+        “path”: “Extension.extension”,
+        “sliceName”: “duration”,
+        “min”: 1,
+        “max”: “1”
       },
       {
-        "id": "Extension.extension:duration.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "duration"
+        “id”: “Extension.extension:duration.url”,
+        “path”: “Extension.extension.url”,
+        “fixedUri”: “duration”
       },
       {
-        "id": "Extension.extension:duration.valueDuration",
-        "path": "Extension.extension.valueDuration",
-        "min": 1,
-        "type": [
+        “id”: “Extension.extension:duration.valueDuration”,
+        “path”: “Extension.extension.valueDuration”,
+        “min”: 1,
+        “type”: [
           {
-            "code": "Duration"
+            “code”: “Duration”
           }
         ]
       },
       {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "https://eqds.org/StructureDefinition/withdrawal-time"
+        “id”: “Extension.url”,
+        “path”: “Extension.url”,
+        “fixedUri”: “https://eqds.org/StructureDefinition/withdrawal-time”
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "max": "0"
+        “id”: “Extension.value[x]”,
+        “path”: “Extension.value[x]”,
+        “max”: “0”
       }
     ]
   }
-}
+}</p>

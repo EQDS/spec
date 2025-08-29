@@ -1,12 +1,12 @@
-{
-  "resourceType": "SearchParameter",
-  "id": "equine-patient-microchip",
-  "url": "https://eqds.org/SearchParameter/equine-patient-microchip",
-  "name": "microchip",
-  "status": "active",
-  "description": "Search by microchip identifier",
-  "code": "microchip",
-  "base": ["Patient"],
-  "type": "token",
-  "expression": "Patient.identifier.where(system='http://icar.org/microchip')"
-}
+<p>{
+  “resourceType”: “SearchParameter”,
+  “id”: “equine-patient-microchip”,
+  “url”: “https://eqds.org/SearchParameter/equine-patient-microchip”,
+  “name”: “microchip”,
+  “status”: “active”,
+  “description”: “Search by microchip identifier”,
+  “code”: “microchip”,
+  “base”: [“Patient”],
+  “type”: “token”,
+  “expression”: “Patient.identifier.where(system=’http://icar.org/microchip’)”
+}</p>

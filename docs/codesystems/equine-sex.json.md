@@ -1,0 +1,21 @@
+---
+redirect_from:
+  - /CodeSystem/equine-sex
+layout: none
+permalink: /docs/codesystems/equine-sex.json
+---
+{
+  "resourceType": "CodeSystem",
+  "id": "equine-sex",
+  "url": "https://eqds.org/CodeSystem/equine-sex",
+  "name": "EquineSexCodeSystem",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {"code": "mare", "display": "Mare", "definition": "Adult female horse"},
+    {"code": "stallion", "display": "Stallion", "definition": "Adult intact male horse"},
+    {"code": "gelding", "display": "Gelding", "definition": "Castrated male horse"},
+    {"code": "colt", "display": "Colt", "definition": "Young male horse (typically under 4 years)"},
+    {"code": "filly", "display": "Filly", "definition": "Young female horse (typically under 4 years)"}
+  ]
+}

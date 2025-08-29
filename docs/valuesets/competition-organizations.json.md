@@ -1,0 +1,25 @@
+---
+redirect_from:
+  - /ValueSet/competition-organizations
+layout: none
+permalink: /docs/valuesets/competition-organizations.json
+---
+{
+  "resourceType": "ValueSet",
+  "id": "competition-organizations",
+  "url": "https://eqds.org/ValueSet/competition-organizations",
+  "name": "CompetitionOrganizations",
+  "status": "active",
+  "compose": {
+    "include": [{
+      "system": "https://eqds.org/CodeSystem/competition-orgs",
+      "concept": [
+        {"code": "fei", "display": "Fédération Équestre Internationale"},
+        {"code": "usef", "display": "United States Equestrian Federation"},
+        {"code": "ec", "display": "Equestrian Canada"},
+        {"code": "nrha", "display": "National Reining Horse Association"},
+        {"code": "aqha", "display": "American Quarter Horse Association"}
+      ]
+    }]
+  }
+}

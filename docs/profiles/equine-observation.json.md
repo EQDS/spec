@@ -1,0 +1,45 @@
+---
+redirect_from:
+  - /StructureDefinition/equine-observation
+layout: none
+permalink: /docs/profiles/equine-observation.json
+---
+{
+  "resourceType": "StructureDefinition",
+  "id": "equine-observation",
+  "url": "https://eqds.org/StructureDefinition/equine-observation",
+  "version": "1.0.0",
+  "name": "EquineObservation",
+  "title": "Equine Observation Profile",
+  "status": "draft",
+  "date": "2025-08-27",
+  "publisher": "Equine Data Standard (EQDS)",
+  "description": "Profile for equine clinical observations, training metrics, and competition performance",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [{
+          "code": "Reference",
+          "targetProfile": ["https://eqds.org/StructureDefinition/equine-patient"]
+        }]
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://terminology.hl7.org/ValueSet/observation-category"
+        }
+      }
+    ]
+  }
+}

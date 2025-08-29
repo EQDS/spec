@@ -1,0 +1,36 @@
+---
+redirect_from:
+  - /StructureDefinition/equine-procedure
+layout: none
+permalink: /docs/profiles/equine-procedure.json
+---
+{
+  "resourceType": "StructureDefinition",
+  "id": "equine-procedure",
+  "url": "https://eqds.org/StructureDefinition/equine-procedure",
+  "version": "1.0.0",
+  "name": "EquineProcedure",
+  "title": "Equine Procedure Profile",
+  "status": "draft",
+  "date": "2025-08-27",
+  "publisher": "Equine Data Standard (EQDS)",
+  "description": "Profile for equine procedures including joint injections, dental work, and farrier services",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [{
+          "code": "Reference",
+          "targetProfile": ["https://eqds.org/StructureDefinition/equine-patient"]
+        }]
+      }
+    ]
+  }
+}
