@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:eqds.org)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
