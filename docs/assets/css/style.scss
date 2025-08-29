@@ -13,6 +13,11 @@ p {
   color: #2c3e50 !important;
 }
 
+/* Improve body text readability */
+body {
+  font-weight: 500;
+}
+
 /* Fix strong/bold text contrast */
 strong, b {
   color: #2c3e50 !important;
@@ -115,7 +120,7 @@ table {
 
 table th {
   background-color: var(--eqds-primary);
-  color: white;
+  color: white !important;
   padding: 12px;
   text-align: left;
   font-weight: 600;
@@ -208,7 +213,26 @@ table tr:hover {
   padding-bottom: 0;
 }
 
+/* Remove default hover effects from all list items */
 .card li:hover {
+  /* No hover effect by default */
+}
+
+/* Only add hover effect for list items containing links */
+.card li:has(a):hover {
+  background-color: #f8f9fa;
+  margin: 0 -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 6px;
+}
+
+/* Fallback for browsers that don't support :has() */
+.card li a:hover {
+  /* Ensure links still get hover styling */
+}
+
+.card li:hover:has(a) {
   background-color: #f8f9fa;
   margin: 0 -25px;
   padding-left: 25px;
@@ -257,7 +281,14 @@ table tr:hover {
   color: #2c3e50;
   font-size: 14px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Keep paragraphs with strong text (like Base URL) non-italic */
+.card p strong {
+  font-style: normal;
 }
 
 /* When p is followed by ul, adjust spacing to avoid double padding */
@@ -294,6 +325,7 @@ table tr:hover {
 #main_content p {
   font-size: 14px;
   color: #2c3e50;
+  font-weight: 500;
 }
 
 #main_content li {
