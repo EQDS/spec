@@ -48,7 +48,6 @@
 
 #main_content h3 {
   color: var(--eqds-dark);
-  margin-top: 25px;
 }
 
 /* Links */
@@ -233,11 +232,18 @@ table tr:hover {
 }
 
 .card p {
-  margin: 0 0 15px 0;
+  margin: 0;
+  padding: 15px 25px;
   color: #2c3e50;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
+}
+
+/* When p is followed by ul, adjust spacing to avoid double padding */
+.card p + ul {
+  padding-top: 10px;
+  margin-top: 0;
 }
 
 /* Global font size improvements and list styling */
@@ -251,7 +257,6 @@ table tr:hover {
 #main_content ul {
   list-style: none;
   list-style-type: none;
-  padding-left: 0;
 }
 
 #main_content p {
