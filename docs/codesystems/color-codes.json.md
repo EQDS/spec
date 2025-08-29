@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/color-codes
 layout: none
-permalink: /docs/codesystems/color-codes.json
+permalink: /codesystems/color-codes.json
 ---
 {
   "resourceType": "CodeSystem",

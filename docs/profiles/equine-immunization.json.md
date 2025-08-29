@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-immunization
 layout: none
-permalink: /docs/profiles/equine-immunization.json
+permalink: /profiles/equine-immunization.json
 ---
 
 {

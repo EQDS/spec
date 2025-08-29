@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-medication-administration
 layout: none
-permalink: /docs/profiles/equine-medication-administration.json
+permalink: /profiles/equine-medication-administration.json
 ---
 
 {

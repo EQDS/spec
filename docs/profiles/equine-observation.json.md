@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-observation
 layout: none
-permalink: /docs/profiles/equine-observation.json
+permalink: /profiles/equine-observation.json
 ---
 {
   "resourceType": "StructureDefinition",

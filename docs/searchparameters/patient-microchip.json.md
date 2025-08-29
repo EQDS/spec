@@ -2,7 +2,7 @@
 redirect_from:
   - /SearchParameter/equine-patient-microchip
 layout: none
-permalink: /docs/searchparameters/patient-microchip.json
+permalink: /searchparameters/patient-microchip.json
 ---
 {
   "resourceType": "SearchParameter",

@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/breeding-info
 layout: none
-permalink: /docs/extensions/breeding-info.json
+permalink: /extensions/breeding-info.json
 ---
 {
   "resourceType": "StructureDefinition",

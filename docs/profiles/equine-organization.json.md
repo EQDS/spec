@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-organization
 layout: none
-permalink: /docs/profiles/equine-organization.json
+permalink: /profiles/equine-organization.json
 ---
 {
   "resourceType": "StructureDefinition",

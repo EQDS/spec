@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-patient
 layout: none
-permalink: /docs/profiles/equine-patient.json
+permalink: /profiles/equine-patient.json
 ---
 
 {

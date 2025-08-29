@@ -2,7 +2,7 @@
 redirect_from:
   - /ValueSet/breed-codes
 layout: none
-permalink: /docs/valuesets/breed-codes.json
+permalink: /valuesets/breed-codes.json
 ---
 {
   "resourceType": "ValueSet",

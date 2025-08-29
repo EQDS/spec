@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/discipline-codes
 layout: none
-permalink: /docs/codesystems/discipline-codes.json
+permalink: /codesystems/discipline-codes.json
 ---
 {
   "resourceType": "CodeSystem",

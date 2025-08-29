@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/equine-color
 layout: none
-permalink: /docs/extensions/equine-color.json
+permalink: /extensions/equine-color.json
 ---
 
 {

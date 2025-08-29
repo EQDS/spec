@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/equine-sex
 layout: none
-permalink: /docs/codesystems/equine-sex.json
+permalink: /codesystems/equine-sex.json
 ---
 {
   "resourceType": "CodeSystem",

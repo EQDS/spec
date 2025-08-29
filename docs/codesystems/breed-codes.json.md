@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/breed-codes
 layout: none
-permalink: /docs/codesystems/breed-codes.json
+permalink: /codesystems/breed-codes.json
 ---
 {
   "resourceType": "CodeSystem",

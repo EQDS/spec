@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/withdrawal-time
 layout: none
-permalink: /docs/extensions/withdrawal-time.json
+permalink: /extensions/withdrawal-time.json
 ---
 {
   "resourceType": "StructureDefinition",

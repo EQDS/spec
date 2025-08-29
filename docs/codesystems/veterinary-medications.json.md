@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/veterinary-medications
 layout: none
-permalink: /docs/codesystems/veterinary-medications.json
+permalink: /codesystems/veterinary-medications.json
 ---
 {
   "resourceType": "CodeSystem",

@@ -2,7 +2,7 @@
 redirect_from:
   - /ValueSet/competition-organizations
 layout: none
-permalink: /docs/valuesets/competition-organizations.json
+permalink: /valuesets/competition-organizations.json
 ---
 {
   "resourceType": "ValueSet",

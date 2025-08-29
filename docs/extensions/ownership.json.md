@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/ownership
 layout: none
-permalink: /docs/extensions/ownership.json
+permalink: /extensions/ownership.json
 ---
 {
   "resourceType": "StructureDefinition",

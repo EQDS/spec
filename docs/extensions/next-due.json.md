@@ -2,7 +2,7 @@
 redirect_from:
   - /StructureDefinition/next-due
 layout: none
-permalink: /docs/extensions/next-due.json
+permalink: /extensions/next-due.json
 ---
 {
   "resourceType": "StructureDefinition",

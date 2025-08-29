@@ -2,7 +2,7 @@
 redirect_from:
   - /SearchParameter/equine-patient-breed
 layout: none
-permalink: /docs/searchparameters/patient-breed.json
+permalink: /searchparameters/patient-breed.json
 ---
 {
   "resourceType": "SearchParameter",

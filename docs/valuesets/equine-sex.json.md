@@ -2,7 +2,7 @@
 redirect_from:
   - /ValueSet/equine-sex
 layout: none
-permalink: /docs/valuesets/equine-sex.json
+permalink: /valuesets/equine-sex.json
 ---
 {
   "resourceType": "ValueSet",

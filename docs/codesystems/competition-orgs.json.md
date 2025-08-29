@@ -2,7 +2,7 @@
 redirect_from:
   - /CodeSystem/competition-orgs
 layout: none
-permalink: /docs/codesystems/competition-orgs.json
+permalink: /codesystems/competition-orgs.json
 ---
 {
   "resourceType": "CodeSystem",
