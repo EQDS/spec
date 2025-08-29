@@ -1,7 +1,8 @@
 --- 
 --- 
 
-@import "tactile";
+@import "{{ site.theme }}";
+
 /* Override base theme's light gray colors for better contrast */
 body {
   color: #2c3e50 !important;

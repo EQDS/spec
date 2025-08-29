@@ -320,7 +320,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-redirect-from
-  jekyll-theme-tactile
   webrick (~> 1.8)
 
 BUNDLED WITH
