@@ -1,4 +1,5 @@
 /* Override base theme's light gray colors for better contrast */
+/* Updated for production deployment */
 body {
     color: #2c3e50 !important;
   }
