@@ -121,19 +121,72 @@ The Equine Patient profile extends the base FHIR Patient resource to include equ
 #### Required Elements
 
 <div class="table-responsive">
-
-| Element | Cardinality | Type | Description |
-|---------|-------------|------|-------------|
-| identifier | 1..* | Identifier | Registration number, microchip, or clinic MRN |
-| name | 1..* | HumanName | Registered name (use text) and barn name (use given) |
-| extension:animal | 1..1 | Extension | Standard FHIR patient-animal extension |
-| extension:animal.species | 1..1 | CodeableConcept | Fixed to Horse (SNOMED: 35354009) |
-| extension:animal.breed | 1..1 | CodeableConcept | Breed code (binding: EquineBreedValueSet) |
-| extension:animal.genderStatus | 1..1 | CodeableConcept | Equine sex (binding: EquineSexValueSet) |
-| extension:color | 0..1 | Extension | Color/marking (optional - not all records include) |
-| extension:ownership | 0..* | Extension | Ownership structure |
-| birthDate | 0..1 | date | Foaling date |
-
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Cardinality</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td>1..*</td>
+<td>Identifier</td>
+<td>Registration number, microchip, or clinic MRN</td>
+</tr>
+<tr>
+<td>name</td>
+<td>1..*</td>
+<td>HumanName</td>
+<td>Registered name (use text) and barn name (use given)</td>
+</tr>
+<tr>
+<td>extension:animal</td>
+<td>1..1</td>
+<td>Extension</td>
+<td>Standard FHIR patient-animal extension</td>
+</tr>
+<tr>
+<td>extension:animal.species</td>
+<td>1..1</td>
+<td>CodeableConcept</td>
+<td>Fixed to Horse (SNOMED: 35354009)</td>
+</tr>
+<tr>
+<td>extension:animal.breed</td>
+<td>1..1</td>
+<td>CodeableConcept</td>
+<td>Breed code (binding: EquineBreedValueSet)</td>
+</tr>
+<tr>
+<td>extension:animal.genderStatus</td>
+<td>1..1</td>
+<td>CodeableConcept</td>
+<td>Equine sex (binding: EquineSexValueSet)</td>
+</tr>
+<tr>
+<td>extension:color</td>
+<td>0..1</td>
+<td>Extension</td>
+<td>Color/marking (optional - not all records include)</td>
+</tr>
+<tr>
+<td>extension:ownership</td>
+<td>0..*</td>
+<td>Extension</td>
+<td>Ownership structure</td>
+</tr>
+<tr>
+<td>birthDate</td>
+<td>0..1</td>
+<td>date</td>
+<td>Foaling date</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 **Naming Convention**: 
@@ -214,15 +267,42 @@ Implementation SHALL use OAuth 2.0 with SMART-on-FHIR for authentication and aut
 #### Scopes and Roles
 
 <div class="table-responsive">
-
-| Role | Typical Scopes | Use Case |
-|------|----------------|-----------|
-| **Owner** | `patient/*.read patient/*.write` | Owner portal for their horses |
-| **Trainer** | `patient/Observation.read patient/Procedure.read` | Training barn with multiple horses |
-| **Veterinary** | `system/*.read system/*.write` | Clinic managing many patients |
-| **Competition Officials** | `patient/Observation.read` | Event-wide fitness checks |
-| **Public** | `patient/Patient.read` | Public horse registry lookup |
-
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Typical Scopes</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Owner</strong></td>
+<td><code>patient/*.read patient/*.write</code></td>
+<td>Owner portal for their horses</td>
+</tr>
+<tr>
+<td><strong>Trainer</strong></td>
+<td><code>patient/Observation.read patient/Procedure.read</code></td>
+<td>Training barn with multiple horses</td>
+</tr>
+<tr>
+<td><strong>Veterinary</strong></td>
+<td><code>system/*.read system/*.write</code></td>
+<td>Clinic managing many patients</td>
+</tr>
+<tr>
+<td><strong>Competition Officials</strong></td>
+<td><code>patient/Observation.read</code></td>
+<td>Event-wide fitness checks</td>
+</tr>
+<tr>
+<td><strong>Public</strong></td>
+<td><code>patient/Patient.read</code></td>
+<td>Public horse registry lookup</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <div class="resource-cards">
@@ -360,12 +440,27 @@ The specification supports document-based exchange using FHIR Bundle resources f
 ### C. Change Log
 
 <div class="table-responsive">
-
-| Version | Date | Description |
-|---------|------|-------------|
-| 1.0.0 | 2025-08-27 | Initial release |
-| 1.1.0 | 2025-08-28 | Updated for eqds.org domain, improved GitHub Pages structure |
-
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2025-08-27</td>
+<td>Initial release</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>2025-08-28</td>
+<td>Updated for eqds.org domain, improved GitHub Pages structure</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 ### D. Contributors
