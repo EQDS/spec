@@ -5,9 +5,6 @@ plugins:
   - jekyll-redirect-from
 remote_theme: pages-themes/tactile@v0.2.0
 
-# Source directory for GitHub Pages
-source: docs
-
 # Site settings
 title: EQDS — Equine Data Standard
 description: Open FHIR specification for equine health data interoperability
