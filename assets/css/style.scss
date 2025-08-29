@@ -1,7 +1,7 @@
----
----
+--- 
+--- 
 
-@import "{{ site.theme }}";
+@import "jekyll-theme-tactile";
 
 /* Override base theme's light gray colors for better contrast */
 body {
@@ -213,26 +213,7 @@ table tr:hover {
   padding-bottom: 0;
 }
 
-/* Remove default hover effects from all list items */
 .card li:hover {
-  /* No hover effect by default */
-}
-
-/* Only add hover effect for list items containing links */
-.card li:has(a):hover {
-  background-color: #f8f9fa;
-  margin: 0 -25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border-radius: 6px;
-}
-
-/* Fallback for browsers that don't support :has() */
-.card li a:hover {
-  /* Ensure links still get hover styling */
-}
-
-.card li:hover:has(a) {
   background-color: #f8f9fa;
   margin: 0 -25px;
   padding-left: 25px;

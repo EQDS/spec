@@ -1,7 +1,8 @@
 # Theme configuration
-remote_theme: pages-themes/tactile@v0.2.0
+
 plugins:
   - jekyll-remote-theme
+theme: jekyll-theme-tactile
 
 # Site settings
 title: EQDS — Equine Data Standard
@@ -45,8 +46,8 @@ navigation:
   - name: Home
     link: /
   - name: Specification
-    link: /specification.html
+    link: /specification
   - name: Certification
-    link: /certification.html
+    link: /certification
   - name: Vendors
-    link: /vendors.html
+    link: /vendors

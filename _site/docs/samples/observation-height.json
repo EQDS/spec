@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "height-observation-01",
+  "meta": {
+    "profile": ["https://eqds.org/StructureDefinition/equine-observation"]
+  },
+  "status": "final",
+  "category": [{
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "vital-signs",
+      "display": "Vital Signs"
+    }]
+  }],
+  "code": {
+    "coding": [{
+      "system": "http://loinc.org",
+      "code": "8302-2",
+      "display": "Body height"
+    }],
+    "text": "Height (withers)"
+  },
+  "subject": {
+    "reference": "Patient/example-horse-01"
+  },
+  "effectiveDateTime": "2025-08-27",
+  "valueQuantity": {
+    "value": 154.9,
+    "unit": "cm",
+    "system": "http://unitsofmeasure.org",
+    "code": "cm"
+  },
+  "note": [{
+    "text": "15.2 hands ≈ 154.9 cm (1 hand = 4 inches)"
+  }]
+}

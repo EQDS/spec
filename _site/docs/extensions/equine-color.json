@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "equine-color",
+  "url": "https://eqds.org/StructureDefinition/equine-color",
+  "version": "1.0.0",
+  "name": "EquineColorExtension",
+  "title": "Equine Color Extension",
+  "status": "draft",
+  "date": "2025-08-27",
+  "publisher": "Equine Data Standard (EQDS)",
+  "description": "Extension for tracking equine color and markings",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Equine color and markings",
+        "definition": "Information about horse color and markings"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://eqds.org/StructureDefinition/equine-color"
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://eqds.org/ValueSet/color-codes"
+        }
+      }
+    ]
+  }
+}

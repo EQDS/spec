@@ -45,7 +45,7 @@ EQDS defines FHIR R5-based profiles, value sets, and exchange rules for:
 ## Quick Start
 
 ### For Implementers
-1. Review the [full specification](https://eqds.org/specification.md)
+1. Review the [full specification](https://eqds.org/specification)
 2. Download relevant [profiles](https://eqds.org/profiles/) for your use case
 3. Use [example resources](https://eqds.org/samples/) as implementation guides
 4. Validate against FHIR R5 and EQDS profiles
@@ -53,8 +53,8 @@ EQDS defines FHIR R5-based profiles, value sets, and exchange rules for:
 ### For Vendors
 1. Implement EQDS profiles in your system
 2. Validate your implementation with provided examples
-3. Apply for [certification](https://eqds.org/certification.md)
-4. Get listed as a [certified vendor](https://eqds.org/vendors.md)
+3. Apply for [certification](https://eqds.org/certification)
+4. Get listed as a [certified vendor](https://eqds.org/vendors)
 
 ## Key Features
 

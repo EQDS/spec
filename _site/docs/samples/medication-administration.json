@@ -1,0 +1,40 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "phenylbutazone-admin",
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "coding": [{
+      "system": "https://eqds.org/CodeSystem/veterinary-medications",
+      "code": "phenylbutazone",
+      "display": "Phenylbutazone (Bute)"
+    }],
+    "text": "Phenylbutazone 2g PO"
+  },
+  "subject": {
+    "reference": "Patient/example-horse-01"
+  },
+  "extension": [{
+    "url": "https://eqds.org/StructureDefinition/withdrawal-time",
+    "extension": [
+      {
+        "url": "organization",
+        "valueCodeableConcept": {
+          "coding": [{
+            "system": "https://eqds.org/CodeSystem/competition-orgs",
+            "code": "usef",
+            "display": "United States Equestrian Federation"
+          }]
+        }
+      },
+      {
+        "url": "duration",
+        "valueDuration": {
+          "value": 7,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
+      }
+    ]
+  }]
+}
