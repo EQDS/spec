@@ -32,35 +32,46 @@ description: Complete FHIR Implementation Guide for Equine Healthcare
 
 The FHIR Implementation Guide for Equine Healthcare (Equine Data Standard) defines a set of conformance requirements for systems exchanging equine health information. This guide extends the base FHIR R5 specification to address the unique requirements of equine healthcare, including multi-owner structures, competition records, training data, and breeding information.
 
-### Background
+<div class="resource-cards">
+  <div class="card">
+    <h3>Background - Equine Healthcare Challenges</h3>
+    <ul>
+      <li>Complex ownership structures with fractional ownership</li>
+      <li>Integration of performance and competition data with health records</li>
+      <li>Breeding and genetic lineage tracking</li>
+      <li>Discipline-specific training and conditioning metrics</li>
+      <li>Regulatory requirements for competition and interstate movement</li>
+    </ul>
+  </div>
 
-Equine healthcare presents unique challenges not addressed by human or companion animal standards:
-- Complex ownership structures with fractional ownership
-- Integration of performance and competition data with health records
-- Breeding and genetic lineage tracking
-- Discipline-specific training and conditioning metrics
-- Regulatory requirements for competition and interstate movement
-
-### Relationship to Other Standards
-
-This implementation guide builds upon:
-- HL7 FHIR R5 base specification
-- SNOMED CT Veterinary Extension (VetSCT)
-- AAHA Problem and Diagnosis Terms
-- AVMA veterinary informatics standards
-- FEI (Fédération Équestre Internationale) competition standards
+  <div class="card">
+    <h3>Built Upon These Standards</h3>
+    <ul>
+      <li>HL7 FHIR R5 base specification</li>
+      <li>SNOMED CT Veterinary Extension (VetSCT)</li>
+      <li>AAHA Problem and Diagnosis Terms</li>
+      <li>AVMA veterinary informatics standards</li>
+      <li>FEI (Fédération Équestre Internationale) competition standards</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
 ## Scope and Purpose
 
-### Use Cases
-
-1. **Clinical Care**: Recording and sharing veterinary examinations, treatments, and procedures
-2. **Competition Management**: Tracking fitness-for-competition, drug withdrawal times, and performance records
-3. **Breeding Operations**: Managing reproductive health, genetic testing, and lineage
-4. **Training Programs**: Documenting training sessions, conditioning, and performance metrics
-5. **Regulatory Compliance**: Supporting Coggins testing, health certificates, and movement tracking
+<div class="resource-cards">
+  <div class="card">
+    <h3>Use Cases</h3>
+    <ul>
+      <li><strong>Clinical Care</strong> - Recording and sharing veterinary examinations, treatments, and procedures</li>
+      <li><strong>Competition Management</strong> - Tracking fitness-for-competition, drug withdrawal times, and performance records</li>
+      <li><strong>Breeding Operations</strong> - Managing reproductive health, genetic testing, and lineage</li>
+      <li><strong>Training Programs</strong> - Documenting training sessions, conditioning, and performance metrics</li>
+      <li><strong>Regulatory Compliance</strong> - Supporting Coggins testing, health certificates, and movement tracking</li>
+    </ul>
+  </div>
+</div>
 
 ### Out of Scope
 
@@ -70,20 +81,28 @@ This implementation guide builds upon:
 
 ## Conformance Requirements
 
-### Capability Statement
+<div class="resource-cards">
+  <div class="card">
+    <h3>Capability Statement - Conformance Requirements</h3>
+    <p>Systems claiming conformance to the Equine Data Standard SHALL:</p>
+    <ul>
+      <li>Support the Equine Patient profile</li>
+      <li>Implement at least one exchange paradigm (REST, Documents, or Messaging)</li>
+      <li>Support the required terminologies</li>
+      <li>Implement the security requirements</li>
+    </ul>
+  </div>
 
-Systems claiming conformance to the Equine Data Standard SHALL:
-1. Support the Equine Patient profile
-2. Implement at least one exchange paradigm (REST, Documents, or Messaging)
-3. Support the required terminologies
-4. Implement the security requirements
-
-### Maturity Levels
-
-Resources are assigned maturity levels following FHIR conventions:
-- **Level 5 (Normative)**: Patient, Practitioner, Organization
-- **Level 3 (Trial Use)**: Observation, Procedure, Condition
-- **Level 1 (Draft)**: Training, Competition, Breeding extensions
+  <div class="card">
+    <h3>Maturity Levels</h3>
+    <p>Resources are assigned maturity levels following FHIR conventions:</p>
+    <ul>
+      <li><strong>Level 5 (Normative)</strong> - Patient, Practitioner, Organization</li>
+      <li><strong>Level 3 (Trial Use)</strong> - Observation, Procedure, Condition</li>
+      <li><strong>Level 1 (Draft)</strong> - Training, Competition, Breeding extensions</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -198,13 +217,18 @@ Implementation SHALL use OAuth 2.0 with SMART-on-FHIR for authentication and aut
 | **Competition Officials** | `patient/Observation.read` | Event-wide fitness checks |
 | **Public** | `patient/Patient.read` | Public horse registry lookup |
 
-### Consent Management
-
-Explicit consent required for:
-- Sharing records between practices
-- Competition drug testing results
-- Breeding records
-- Insurance claims
+<div class="resource-cards">
+  <div class="card">
+    <h3>Consent Management</h3>
+    <p>Explicit consent required for:</p>
+    <ul>
+      <li>Sharing records between practices</li>
+      <li>Competition drug testing results</li>
+      <li>Breeding records</li>
+      <li>Insurance claims</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -252,12 +276,17 @@ GET [base]/Patient?microchip=985141405208421
 GET [base]/Observation?subject=Patient/horse-123&category=training
 ```
 
-### Batch Operations
-
-Support for bulk operations for common workflows:
-- Import entire barn roster
-- Submit competition entries for multiple horses
-- Update vaccination records for all horses at a facility
+<div class="resource-cards">
+  <div class="card">
+    <h3>Batch Operations</h3>
+    <p>Support for bulk operations for common workflows:</p>
+    <ul>
+      <li>Import entire barn roster</li>
+      <li>Submit competition entries for multiple horses</li>
+      <li>Update vaccination records for all horses at a facility</li>
+    </ul>
+  </div>
+</div>
 
 ### Document Exchange
 
@@ -269,34 +298,56 @@ The specification supports document-based exchange using FHIR Bundle resources f
 
 ### A. Canonical URLs Reference
 
-**Base URL:** https://eqds.org
+<div class="resource-cards">
+  <div class="card">
+    <h3>StructureDefinitions</h3>
+    <p><strong>Base URL:</strong> https://eqds.org</p>
+    <ul>
+      <li>/StructureDefinition/equine-patient</li>
+      <li>/StructureDefinition/equine-observation</li>
+      <li>/StructureDefinition/equine-medication-administration</li>
+      <li>/StructureDefinition/equine-immunization</li>
+    </ul>
+  </div>
 
-**StructureDefinitions**:
-- /StructureDefinition/equine-patient
-- /StructureDefinition/equine-observation
-- /StructureDefinition/equine-medication-administration
-- /StructureDefinition/equine-immunization
+  <div class="card">
+    <h3>Extensions</h3>
+    <p><strong>Base URL:</strong> https://eqds.org</p>
+    <ul>
+      <li>/StructureDefinition/ownership</li>
+      <li>/StructureDefinition/breeding-info</li>
+      <li>/StructureDefinition/equine-color</li>
+      <li>/StructureDefinition/withdrawal-time</li>
+    </ul>
+  </div>
 
-**Extensions**:
-- /StructureDefinition/ownership
-- /StructureDefinition/breeding-info
-- /StructureDefinition/equine-color
-- /StructureDefinition/withdrawal-time
-
-**CodeSystems**:
-- /CodeSystem/equine-sex
-- /CodeSystem/breed-codes
-- /CodeSystem/color-codes
-- /CodeSystem/discipline-codes
-- /CodeSystem/competition-orgs
+  <div class="card">
+    <h3>CodeSystems</h3>
+    <p><strong>Base URL:</strong> https://eqds.org</p>
+    <ul>
+      <li>/CodeSystem/equine-sex</li>
+      <li>/CodeSystem/breed-codes</li>
+      <li>/CodeSystem/color-codes</li>
+      <li>/CodeSystem/discipline-codes</li>
+      <li>/CodeSystem/competition-orgs</li>
+    </ul>
+  </div>
+</div>
 
 ### B. Validation Requirements
 
-All resources and examples in this specification MUST pass validation against:
-1. HL7 FHIR R5 base specification
-2. Profile constraints defined in this IG
-3. Terminology bindings
-4. Business rule invariants (e.g., ownership percentages)
+<div class="resource-cards">
+  <div class="card">
+    <h3>Validation Requirements</h3>
+    <p>All resources and examples in this specification MUST pass validation against:</p>
+    <ul>
+      <li>HL7 FHIR R5 base specification</li>
+      <li>Profile constraints defined in this IG</li>
+      <li>Terminology bindings</li>
+      <li>Business rule invariants (e.g., ownership percentages)</li>
+    </ul>
+  </div>
+</div>
 
 ### C. Change Log
 

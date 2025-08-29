@@ -8,11 +8,36 @@ description: How vendors can certify their systems as EQDS compliant
 
 Vendors can certify their systems as **EQDS Compliant**.
 
-## Process
-1. Validate your JSON bundles using the [EQDS Validator](https://github.com/EQDS/validator).
-2. Submit test data + certification application.
-3. If approved, you will receive:
-   - A **badge** (e.g., "EQDS Certified 2025")
-   - Listing on the [Certified Vendors](vendors.md) page.
+## Certification Process
 
-Annual renewal is optional, but badges include the certification year.
+<div class="resource-cards">
+  <div class="card">
+    <h3>Step 1: Validation</h3>
+    <ul>
+      <li>Validate your JSON bundles using the <a href="https://github.com/EQDS/validator">EQDS Validator</a></li>
+      <li>Ensure all profiles pass validation</li>
+      <li>Test with sample data</li>
+      <li>Verify conformance requirements</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 2: Application</h3>
+    <ul>
+      <li>Submit test data demonstrating compliance</li>
+      <li>Complete certification application</li>
+      <li>Provide system documentation</li>
+      <li>Include implementation details</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Step 3: Certification</h3>
+    <ul>
+      <li>Receive <strong>EQDS Certified</strong> badge with year</li>
+      <li>Get listed on the <a href="vendors.md">Certified Vendors</a> page</li>
+      <li>Access to certification logo and materials</li>
+      <li>Annual renewal available (optional)</li>
+    </ul>
+  </div>
+</div>
