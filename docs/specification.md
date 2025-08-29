@@ -120,6 +120,8 @@ The Equine Patient profile extends the base FHIR Patient resource to include equ
 
 #### Required Elements
 
+<div class="table-responsive">
+
 | Element | Cardinality | Type | Description |
 |---------|-------------|------|-------------|
 | identifier | 1..* | Identifier | Registration number, microchip, or clinic MRN |
@@ -131,6 +133,8 @@ The Equine Patient profile extends the base FHIR Patient resource to include equ
 | extension:color | 0..1 | Extension | Color/marking (optional - not all records include) |
 | extension:ownership | 0..* | Extension | Ownership structure |
 | birthDate | 0..1 | date | Foaling date |
+
+</div>
 
 **Naming Convention**: 
 - `name.text`: Full registered name
@@ -209,6 +213,8 @@ Implementation SHALL use OAuth 2.0 with SMART-on-FHIR for authentication and aut
 
 #### Scopes and Roles
 
+<div class="table-responsive">
+
 | Role | Typical Scopes | Use Case |
 |------|----------------|-----------|
 | **Owner** | `patient/*.read patient/*.write` | Owner portal for their horses |
@@ -216,6 +222,8 @@ Implementation SHALL use OAuth 2.0 with SMART-on-FHIR for authentication and aut
 | **Veterinary** | `system/*.read system/*.write` | Clinic managing many patients |
 | **Competition Officials** | `patient/Observation.read` | Event-wide fitness checks |
 | **Public** | `patient/Patient.read` | Public horse registry lookup |
+
+</div>
 
 <div class="resource-cards">
   <div class="card">
@@ -351,10 +359,14 @@ The specification supports document-based exchange using FHIR Bundle resources f
 
 ### C. Change Log
 
+<div class="table-responsive">
+
 | Version | Date | Description |
 |---------|------|-------------|
 | 1.0.0 | 2025-08-27 | Initial release |
 | 1.1.0 | 2025-08-28 | Updated for eqds.org domain, improved GitHub Pages structure |
+
+</div>
 
 ### D. Contributors
 
