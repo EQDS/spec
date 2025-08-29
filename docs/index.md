@@ -4,7 +4,7 @@ title: Equine Data Standard (EQDS)
 description: Open FHIR specification for equine health data interoperability
 ---
 
-# EQDS — Equine Data Standard
+# Equine Data Standard (EQDS)
 
 Welcome to **EQDS**, the open standard for equine health interoperability.
 
@@ -24,7 +24,7 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 
 ## FHIR Resources
 
-### 🏥 Profiles - Core Resources
+**Profiles - Core Resources**
 
 - [Equine Patient](profiles/equine-patient.json) - Core equine patient profile
 - [Equine Observation](profiles/equine-observation.json) - Clinical observations, training, and competition data
@@ -34,7 +34,7 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Equine Practitioner](profiles/equine-practitioner.json) - Veterinary practitioners
 - [Equine Organization](profiles/equine-organization.json) - Clinics, facilities, and venues
 
-### 📚 Code Systems - Terminologies
+**Code Systems - Terminologies**
 
 - [Equine Sex](codesystems/equine-sex.json) - Mare, stallion, gelding, etc.
 - [Breed Codes](codesystems/breed-codes.json) - Horse breed classifications
@@ -43,7 +43,7 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Competition Organizations](codesystems/competition-orgs.json) - FEI, USEF, etc.
 - [Veterinary Medications](codesystems/veterinary-medications.json) - Common equine medications
 
-### 🔧 Extensions - Equine-Specific Data
+**Extensions - Equine-Specific Data**
 
 - [Ownership Extension](extensions/ownership.json) - Track fractional ownership
 - [Breeding Info Extension](extensions/breeding-info.json) - Sire and dam information
@@ -51,7 +51,7 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Withdrawal Time Extension](extensions/withdrawal-time.json) - Competition drug withdrawal
 - [Next Due Extension](extensions/next-due.json) - Vaccination schedules
 
-### 📝 Examples - Implementation Samples
+**Examples - Implementation Samples**
 
 - [Patient Example](samples/patient-example.json) - Complete equine patient record
 - [Lameness Observation](samples/observation-lameness.json) - AAEP lameness grading
@@ -62,13 +62,13 @@ Our goal: **consistent, interoperable data exchange across the equine industry.*
 - [Coggins Test](samples/coggins-test.json) - EIA test result
 - [Medication Administration](samples/medication-administration.json) - Drug administration with withdrawal
 
-### 📊 Value Sets
+**Value Sets**
 
 - [Equine Sex ValueSet](valuesets/equine-sex.json)
 - [Breed Codes ValueSet](valuesets/breed-codes.json)
 - [Competition Organizations ValueSet](valuesets/competition-organizations.json)
 
-### 🔍 Search Parameters
+**Search Parameters**
 
 - [Patient Breed Search](searchparameters/patient-breed.json)
 - [Patient Microchip Search](searchparameters/patient-microchip.json)

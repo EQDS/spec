@@ -1,4 +1,4 @@
-# EQDS — Equine Data Standard
+# Equine Data Standard (EQDS)
 
 EQDS is an open specification for interoperability in equine health and management systems.  
 This repository hosts the official specification and website for [eqds.org](https://eqds.org).

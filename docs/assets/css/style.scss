@@ -117,90 +117,88 @@ table tr:hover {
   background-color: #f5f5f5;
 }
 
-/* Resource sections styling */
-#main_content h3 {
-  color: var(--eqds-primary);
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  padding: 15px 20px;
-  margin: 30px 0 15px 0;
-  border-left: 5px solid var(--eqds-secondary);
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-weight: 600;
-  position: relative;
-  display: block;
-  width: 100%;
-  clear: both;
-}
-
-#main_content h3:hover {
-  background: linear-gradient(135deg, #e9ecef, #dee2e6);
-  transform: translateX(2px);
-  transition: all 0.3s ease;
-}
-
-/* Style the sections under FHIR Resources */
-#main_content h2 + h3 {
-  margin-top: 20px;
-}
-
-/* Enhanced list styling for resource links - only apply to lists following h3 headers */
-#main_content h3 + ul {
+/* Resource card styling for bold headers followed by lists */
+#main_content p strong + ul {
   background: white;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 0;
+  margin-top: -15px;
   margin-bottom: 30px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
-  display: block;
-  width: 100%;
-  clear: both;
+  overflow: hidden;
 }
 
-#main_content h3 + ul li {
-  margin-bottom: 12px;
+/* Style the bold header inside the card */
+#main_content p {
+  margin-bottom: 0;
+}
+
+#main_content p strong {
+  display: block;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: var(--eqds-primary);
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 15px 20px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Enhanced list styling within cards */
+#main_content p + ul {
+  background: white;
+  padding: 20px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  border-radius: 0 0 8px 8px;
+  list-style: none;
+}
+
+#main_content p + ul li {
+  margin-bottom: 10px;
   padding: 8px 0;
   border-bottom: 1px solid #f8f9fa;
   transition: background-color 0.2s ease;
-  list-style-type: none;
-  position: relative;
-  padding-left: 20px;
 }
 
-#main_content h3 + ul li:before {
-  content: "▶";
-  color: var(--eqds-secondary);
-  position: absolute;
-  left: 0;
-  top: 8px;
-}
-
-#main_content h3 + ul li:last-child {
+#main_content p + ul li:last-child {
   border-bottom: none;
+  margin-bottom: 0;
 }
 
-#main_content h3 + ul li:hover {
+#main_content p + ul li:hover {
   background-color: #f8f9fa;
-  padding-left: 30px;
   margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 18px;
+  padding-right: 18px;
   border-radius: 4px;
 }
 
-#main_content h3 + ul li:hover:before {
-  color: var(--eqds-primary);
-}
-
-/* Special styling for resource links in cards */
-#main_content h3 + ul li a {
-  font-weight: 500;
-  text-decoration: none;
+/* Professional link styling */
+#main_content p + ul li a {
   color: var(--eqds-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
 }
 
-#main_content h3 + ul li a:hover {
+#main_content p + ul li a:hover {
   color: var(--eqds-primary);
   text-decoration: underline;
+}
+
+#main_content p + ul li a:before {
+  content: "•";
+  color: var(--eqds-secondary);
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+#main_content p + ul li:hover a:before {
+  color: var(--eqds-primary);
 }
 
 /* Default list styling for other lists */
@@ -212,11 +210,16 @@ table tr:hover {
   margin-bottom: 8px;
 }
 
-/* Emoji icons in headers get special styling */
-#main_content h3:before {
-  margin-right: 10px;
-  font-size: 1.2em;
+/* Remove default list styling from card lists */
+#main_content p + ul {
+  padding-left: 20px;
 }
+
+#main_content p + ul li {
+  list-style: none;
+  padding-left: 0;
+}
+
 
 /* Alert boxes */
 .alert {

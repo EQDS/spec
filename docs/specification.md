@@ -64,8 +64,6 @@ This implementation guide builds upon:
 
 ### Out of Scope
 
-- Financial transactions (billing, insurance)
-- Practice management operations
 - Non-equine species
 
 ---
@@ -120,26 +118,37 @@ The Equine Patient profile extends the base FHIR Patient resource to include equ
 - `name.given[0]`: Barn name or call name
 - `name.use`: "official" for registered, "nickname" for barn name
 
-### Other Profiles
-
-- **[Equine Observation](profiles/equine-observation.json)** - Clinical observations, training metrics, and competition performance
-- **[Equine Medication Administration](profiles/equine-medication-administration.json)** - Medications with competition withdrawal times  
-- **[Equine Immunization](profiles/equine-immunization.json)** - Vaccinations and immunizations
-- **[Equine Procedure](profiles/equine-procedure.json)** - Veterinary procedures
-- **[Equine Practitioner](profiles/equine-practitioner.json)** - Veterinary practitioners
-- **[Equine Organization](profiles/equine-organization.json)** - Clinics, facilities, and venues
+<div class="resource-cards">
+  <div class="card">
+    <h3>Profiles - Core Resources</h3>
+    <ul>
+      <li><a href="profiles/equine-patient.json">Equine Patient</a> - Complete patient profile with equine-specific extensions</li>
+      <li><a href="profiles/equine-observation.json">Equine Observation</a> - Clinical observations, training metrics, and competition performance</li>
+      <li><a href="profiles/equine-medication-administration.json">Equine Medication Administration</a> - Medications with competition withdrawal times</li>
+      <li><a href="profiles/equine-immunization.json">Equine Immunization</a> - Vaccinations and immunizations</li>
+      <li><a href="profiles/equine-procedure.json">Equine Procedure</a> - Veterinary procedures</li>
+      <li><a href="profiles/equine-practitioner.json">Equine Practitioner</a> - Veterinary practitioners</li>
+      <li><a href="profiles/equine-organization.json">Equine Organization</a> - Clinics, facilities, and venues</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
 ## Extensions
 
-### Core Extensions
-
-1. **[Ownership](extensions/ownership.json)** - Tracks fractional ownership with percentages
-2. **[Breeding Info](extensions/breeding-info.json)** - Sire and dam information
-3. **[Equine Color](extensions/equine-color.json)** - Color and markings
-4. **[Withdrawal Time](extensions/withdrawal-time.json)** - Competition drug withdrawal times
-5. **[Next Due](extensions/next-due.json)** - Vaccination schedule tracking
+<div class="resource-cards">
+  <div class="card">
+    <h3>Extensions - Equine-Specific Data</h3>
+    <ul>
+      <li><a href="extensions/ownership.json">Ownership</a> - Tracks fractional ownership with percentages</li>
+      <li><a href="extensions/breeding-info.json">Breeding Info</a> - Sire and dam information</li>
+      <li><a href="extensions/equine-color.json">Equine Color</a> - Color and markings</li>
+      <li><a href="extensions/withdrawal-time.json">Withdrawal Time</a> - Competition drug withdrawal times</li>
+      <li><a href="extensions/next-due.json">Next Due</a> - Vaccination schedule tracking</li>
+    </ul>
+  </div>
+</div>
 
 The Ownership Extension supports fractional ownership with validation that ownership percentages should sum to 100% (±0.01% tolerance).
 
@@ -147,22 +156,29 @@ The Ownership Extension supports fractional ownership with validation that owner
 
 ## Terminologies
 
-### Required Code Systems
-
-All code systems use the eqds.org domain as the canonical URL:
-
-- **[Equine Sex](codesystems/equine-sex.json)** - Mare, stallion, gelding, colt, filly
-- **[Breed Codes](codesystems/breed-codes.json)** - Quarter Horse, Thoroughbred, Arabian, etc.
-- **[Color Codes](codesystems/color-codes.json)** - Bay, chestnut, palomino, etc.
-- **[Discipline Codes](codesystems/discipline-codes.json)** - Reining, dressage, jumping, etc.
-- **[Competition Organizations](codesystems/competition-orgs.json)** - FEI, USEF, NRHA, etc.
-- **[Veterinary Medications](codesystems/veterinary-medications.json)** - Common equine medications
-
-### Value Sets
-
-- **[Equine Sex ValueSet](valuesets/equine-sex.json)**
-- **[Breed Codes ValueSet](valuesets/breed-codes.json)**
-- **[Competition Organizations ValueSet](valuesets/competition-organizations.json)**
+<div class="resource-cards">
+  <div class="card">
+    <h3>Code Systems - Terminologies</h3>
+    <p>All code systems use the eqds.org domain as the canonical URL:</p>
+    <ul>
+      <li><a href="codesystems/equine-sex.json">Equine Sex</a> - Mare, stallion, gelding, colt, filly</li>
+      <li><a href="codesystems/breed-codes.json">Breed Codes</a> - Quarter Horse, Thoroughbred, Arabian, etc.</li>
+      <li><a href="codesystems/color-codes.json">Color Codes</a> - Bay, chestnut, palomino, etc.</li>
+      <li><a href="codesystems/discipline-codes.json">Discipline Codes</a> - Reining, dressage, jumping, etc.</li>
+      <li><a href="codesystems/competition-orgs.json">Competition Organizations</a> - FEI, USEF, NRHA, etc.</li>
+      <li><a href="codesystems/veterinary-medications.json">Veterinary Medications</a> - Common equine medications</li>
+    </ul>
+  </div>
+  
+  <div class="card">
+    <h3>Value Sets</h3>
+    <ul>
+      <li><a href="valuesets/equine-sex.json">Equine Sex ValueSet</a></li>
+      <li><a href="valuesets/breed-codes.json">Breed Codes ValueSet</a></li>
+      <li><a href="valuesets/competition-organizations.json">Competition Organizations ValueSet</a></li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -194,16 +210,21 @@ Explicit consent required for:
 
 ## Examples
 
-### Complete Examples
-
-- **[Patient Example](samples/patient-example.json)** - Complete equine patient record with ownership and breeding information
-- **[Lameness Observation](samples/observation-lameness.json)** - AAEP lameness grading example
-- **[Competition Score](samples/observation-competition.json)** - Reining pattern score with maneuver breakdown
-- **[Training Session](samples/observation-training.json)** - Training activity documentation
-- **[Height Measurement](samples/observation-height.json)** - Body height in hands and centimeters
-- **[Vaccination Record](samples/immunization-example.json)** - Equine influenza vaccination
-- **[Coggins Test](samples/coggins-test.json)** - EIA test diagnostic report
-- **[Medication Administration](samples/medication-administration.json)** - Phenylbutazone with USEF withdrawal time
+<div class="resource-cards">
+  <div class="card">
+    <h3>Examples - Implementation Samples</h3>
+    <ul>
+      <li><a href="samples/patient-example.json">Patient Example</a> - Complete equine patient record with ownership and breeding information</li>
+      <li><a href="samples/observation-lameness.json">Lameness Observation</a> - AAEP lameness grading example</li>
+      <li><a href="samples/observation-competition.json">Competition Score</a> - Reining pattern score with maneuver breakdown</li>
+      <li><a href="samples/observation-training.json">Training Session</a> - Training activity documentation</li>
+      <li><a href="samples/observation-height.json">Height Measurement</a> - Body height in hands and centimeters</li>
+      <li><a href="samples/immunization-example.json">Vaccination Record</a> - Equine influenza vaccination</li>
+      <li><a href="samples/coggins-test.json">Coggins Test</a> - EIA test diagnostic report</li>
+      <li><a href="samples/medication-administration.json">Medication Administration</a> - Phenylbutazone with USEF withdrawal time</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -213,9 +234,16 @@ Explicit consent required for:
 
 #### Search Parameters
 
-- **[Breed Search](searchparameters/patient-breed.json)** - Search patients by breed
-- **[Microchip Search](searchparameters/patient-microchip.json)** - Search by microchip identifier
-- **[Owner Search](searchparameters/patient-owner.json)** - Search by owner reference
+<div class="resource-cards">
+  <div class="card">
+    <h3>Search Parameters</h3>
+    <ul>
+      <li><a href="searchparameters/patient-breed.json">Breed Search</a> - Search patients by breed</li>
+      <li><a href="searchparameters/patient-microchip.json">Microchip Search</a> - Search by microchip identifier</li>
+      <li><a href="searchparameters/patient-owner.json">Owner Search</a> - Search by owner reference</li>
+    </ul>
+  </div>
+</div>
 
 Example searches:
 ```
