@@ -6,7 +6,7 @@ description: Complete FHIR Implementation Guide for Equine Healthcare
 
 # FHIR Implementation Guide for Equine Healthcare (Equine Data Standard)
 
-**Version:** 1.1.0  
+**Version:** 1.0.2  
 **Status:** Draft  
 **Date:** 2025-08-27  
 **Publisher:** Equine Data Standard (EQDS)  
@@ -35,6 +35,11 @@ description: Complete FHIR Implementation Guide for Equine Healthcare
 This is the complete technical specification for the Equine Data Standard (EQDS). For background information, use cases, and audience details, please see the [EQDS homepage](index).
 
 This Implementation Guide defines conformance requirements for systems exchanging equine health information using HL7® FHIR® R5. It specifies profiles, extensions, terminologies, and exchange patterns specifically designed for equine healthcare interoperability.
+
+### Navigation
+
+- [← Back to EQDS Homepage](/)
+- [🤖 Expanded JSON Specification](/expanded-json-spec) - Single page with all specifications for AI systems
 
 ### Out of Scope
 
@@ -457,9 +462,14 @@ The specification supports document-based exchange using FHIR Bundle resources f
 <td>Initial release</td>
 </tr>
 <tr>
-<td>1.1.0</td>
+<td>1.0.1</td>
 <td>2025-08-28</td>
 <td>Updated for eqds.org domain, improved GitHub Pages structure</td>
+</tr>
+<tr>
+<td>1.0.2</td>
+<td>2025-08-31</td>
+<td>Expanded example page published for readability by AI coding systems. Added introduction content to index page and moved all examples to specification page.</td>
 </tr>
 </tbody>
 </table>

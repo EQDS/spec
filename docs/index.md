@@ -23,6 +23,15 @@ EQDS enables **consistent, interoperable data exchange across the equine industr
 
 ---
 
+## Quick Links
+
+- [**Full Technical Specification**](specification) - Complete FHIR Implementation Guide
+- [**Expanded JSON Specification**](expanded-json-spec) - All examples expanded with detailed JSON schemas
+- [**Certification Process**](certification) - Vendor compliance and certification *(Coming Soon)*
+- [**Certified Vendors**](vendors) - Directory of EQDS-compliant systems *(Coming Soon)*
+
+---
+
 ## Background
 
 <div class="resource-cards">
@@ -118,20 +127,12 @@ EQDS enables **consistent, interoperable data exchange across the equine industr
 
 ---
 
-## Quick Links
-
-- [**Full Technical Specification**](specification) - Complete FHIR Implementation Guide
-- [**Certification Process**](certification) - Vendor compliance and certification *(Coming Soon)*
-- [**Certified Vendors**](vendors) - Directory of EQDS-compliant systems *(Coming Soon)*
-
----
-
 ## Call to Action
 
 <div class="resource-cards">
   <div class="card">
     <h3>Ready to Get Started?</h3>
-    <p><strong>For Implementers:</strong> Review the <a href="specification">full technical specification</a> to understand FHIR profiles, value sets, and conformance requirements.</p>
+    <p><strong>For Implementers:</strong> Review the <a href="specification">full technical specification</a> to understand FHIR profiles, value sets, and conformance requirements. Also there is a single page with all specifications expanded for easy consumption by AI systems here: <a href="expanded-json-spec">expanded JSON specification</a>.</p>
     <p><strong>For Vendors:</strong> Learn about our certification process to ensure your system meets EQDS compliance standards.</p>
     <p><strong>For End Users:</strong> Contact your software vendor to request EQDS support, or explore our directory of certified systems.</p>
   </div>

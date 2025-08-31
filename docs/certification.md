@@ -14,7 +14,7 @@ Vendors can certify their systems as **EQDS Compliant**.
   <div class="card">
     <h3>Step 1: Validation</h3>
     <ul>
-      <li>Validate your JSON bundles using the <a href="https://github.com/EQDS/validator">EQDS Validator</a></li>
+      <li>Validate your JSON bundles using the <a href="https://github.com/EQDS/validator">EQDS Validator</a> (Coming soon)</li>
       <li>Ensure all profiles pass validation</li>
       <li>Test with sample data</li>
       <li>Verify conformance requirements</li>
