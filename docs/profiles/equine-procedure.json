@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /StructureDefinition/equine-procedure
-layout: none
+layout: null
 permalink: /profiles/equine-procedure.json
 ---
 {

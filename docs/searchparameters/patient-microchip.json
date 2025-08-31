@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /SearchParameter/equine-patient-microchip
-layout: none
+layout: null
 permalink: /searchparameters/patient-microchip.json
 ---
 {

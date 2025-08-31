@@ -1,15 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:eqds.org)",
-      "Bash(curl:*)",
-      "Bash(bundle exec jekyll serve:*)",
-      "Bash(bundle install:*)",
-      "WebFetch(domain:docs.github.com)",
-      "WebFetch(domain:pages-themes.github.io)",
-      "WebFetch(domain:jekyllrb.com)",
-      "WebSearch"
+      "Bash(bundle exec:*)",
+      "Bash(pkill:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

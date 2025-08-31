@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /SearchParameter/equine-patient-breed
-layout: none
+layout: null
 permalink: /searchparameters/patient-breed.json
 ---
 {

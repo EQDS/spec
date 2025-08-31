@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /ValueSet/breed-codes
-layout: none
+layout: null
 permalink: /valuesets/breed-codes.json
 ---
 {

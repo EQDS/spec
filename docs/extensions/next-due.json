@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /StructureDefinition/next-due
-layout: none
+layout: null
 permalink: /extensions/next-due.json
 ---
 {

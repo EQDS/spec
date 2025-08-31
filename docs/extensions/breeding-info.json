@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /StructureDefinition/breeding-info
-layout: none
+layout: null
 permalink: /extensions/breeding-info.json
 ---
 {

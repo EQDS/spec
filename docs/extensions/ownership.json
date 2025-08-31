@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /StructureDefinition/ownership
-layout: none
+layout: null
 permalink: /extensions/ownership.json
 ---
 {

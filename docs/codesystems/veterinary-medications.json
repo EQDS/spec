@@ -1,7 +1,7 @@
 ---
 redirect_from:
   - /CodeSystem/veterinary-medications
-layout: none
+layout: null
 permalink: /codesystems/veterinary-medications.json
 ---
 {
