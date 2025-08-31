@@ -3,6 +3,7 @@ layout: default
 title: Equine Data Standard
 description: Open FHIR specification for equine data interoperability
 ---
+
 <div style="text-align:center;">
   <div class="eqds-header" style="display:flex; justify-content:center; align-items:center;">
     <div class="eqds-logo">
@@ -12,89 +13,155 @@ description: Open FHIR specification for equine data interoperability
   <h1 style="border-bottom:none !important">Welcome to <strong>EQDS</strong>, the international open standard for equine data interoperability</h1>
 </div>
 
+---
 
-## About
-EQDS defines FHIR-based profiles, value sets, and exchange rules for:
-- Horse identification
-- Veterinary records
-- Lab results
-- Competition/encounter data
+## Introduction
 
-Our goal: **consistent, interoperable data exchange across the equine industry.**
+The **Equine Data Standard (EQDS)** is a comprehensive FHIR Implementation Guide that defines conformance requirements for systems exchanging equine health information. Built on HL7® FHIR® R5, EQDS extends the base specification to address the unique requirements of equine healthcare, including multi-owner structures, competition records, training data, and breeding information.
 
-## Quick Links
-- [Full Specification](specification)
-<!-- - [Certification Process](certification) -->
-<!-- - [Certified Vendors](vendors) -->
+EQDS enables **consistent, interoperable data exchange across the equine industry** by providing standardized profiles, value sets, and exchange rules for horse identification, veterinary records, laboratory results, and competition data.
 
-## FHIR Resources
+---
+
+## Background
 
 <div class="resource-cards">
   <div class="card">
-    <h3>Profiles - Core Resources</h3>
+    <h3>Equine Healthcare Challenges</h3>
+    <p>The equine industry faces unique data challenges that EQDS addresses:</p>
     <ul>
-      <li><a href="profiles/equine-patient.json">Equine Patient</a> - Core equine patient profile</li>
-      <li><a href="profiles/equine-observation.json">Equine Observation</a> - Clinical observations, training, and competition data</li>
-      <li><a href="profiles/equine-medication-administration.json">Equine Medication Administration</a> - Medications with withdrawal times</li>
-      <li><a href="profiles/equine-immunization.json">Equine Immunization</a> - Vaccinations and immunizations</li>
-      <li><a href="profiles/equine-procedure.json">Equine Procedure</a> - Veterinary procedures</li>
-      <li><a href="profiles/equine-practitioner.json">Equine Practitioner</a> - Veterinary practitioners</li>
-      <li><a href="profiles/equine-organization.json">Equine Organization</a> - Clinics, facilities, and venues</li>
+      <li><strong>Complex ownership structures</strong> with fractional ownership and multiple stakeholders</li>
+      <li><strong>Integration of performance and competition data</strong> with health records across disciplines</li>
+      <li><strong>Breeding and genetic lineage tracking</strong> for bloodline management and genetic health</li>
+      <li><strong>Discipline-specific training and conditioning metrics</strong> tailored to different equestrian sports</li>
+      <li><strong>Regulatory requirements</strong> for competition eligibility and interstate movement</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## Built Upon These Standards
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Foundation Standards</h3>
+    <p>EQDS leverages established healthcare and veterinary standards:</p>
+    <ul>
+      <li><strong>HL7 FHIR R5</strong> - Base specification for healthcare interoperability</li>
+      <li><strong>SNOMED CT Veterinary Extension (VetSCT)</strong> - Clinical terminology for veterinary medicine</li>
+      <li><strong>AAHA Problem and Diagnosis Terms</strong> - Standardized veterinary diagnoses</li>
+      <li><strong>AVMA veterinary informatics standards</strong> - Professional veterinary data standards</li>
+      <li><strong>FEI (Fédération Équestre Internationale)</strong> - International competition standards</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## Use Cases
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Primary Use Cases</h3>
+    <ul>
+      <li><strong>Clinical Care</strong> - Recording and sharing veterinary examinations, treatments, and procedures across practices</li>
+      <li><strong>Competition Management</strong> - Tracking fitness-for-competition, drug withdrawal times, and performance records</li>
+      <li><strong>Breeding Operations</strong> - Managing reproductive health, genetic testing, and bloodline documentation</li>
+      <li><strong>Training Programs</strong> - Documenting training sessions, conditioning programs, and performance metrics</li>
+      <li><strong>Regulatory Compliance</strong> - Supporting Coggins testing, health certificates, and movement tracking for shows and sales</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## Who Should Use EQDS
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Veterinary Practices</h3>
+    <ul>
+      <li>Share patient records seamlessly between practices</li>
+      <li>Access comprehensive health histories when treating new patients</li>
+      <li>Streamline regulatory reporting and compliance</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Code Systems - Terminologies</h3>
+    <h3>Horse Owners & Trainers</h3>
     <ul>
-      <li><a href="codesystems/equine-sex.json">Equine Sex</a> - Mare, stallion, gelding, etc.</li>
-      <li><a href="codesystems/breed-codes.json">Breed Codes</a> - Horse breed classifications</li>
-      <li><a href="codesystems/color-codes.json">Color Codes</a> - Coat colors and markings</li>
-      <li><a href="codesystems/discipline-codes.json">Discipline Codes</a> - Equestrian disciplines</li>
-      <li><a href="codesystems/competition-orgs.json">Competition Organizations</a> - FEI, USEF, etc.</li>
-      <li><a href="codesystems/veterinary-medications.json">Veterinary Medications</a> - Common equine medications</li>
+      <li>Maintain complete health and performance records</li>
+      <li>Share data with veterinarians, trainers, and competition officials</li>
+      <li>Track training progress and competition eligibility</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Extensions - Equine-Specific Data</h3>
+    <h3>Competition Organizations</h3>
     <ul>
-      <li><a href="extensions/ownership.json">Ownership Extension</a> - Track fractional ownership</li>
-      <li><a href="extensions/breeding-info.json">Breeding Info Extension</a> - Sire and dam information</li>
-      <li><a href="extensions/equine-color.json">Equine Color Extension</a> - Color and markings</li>
-      <li><a href="extensions/withdrawal-time.json">Withdrawal Time Extension</a> - Competition drug withdrawal</li>
-      <li><a href="extensions/next-due.json">Next Due Extension</a> - Vaccination schedules</li>
+      <li>Verify horse eligibility and health status</li>
+      <li>Access drug testing and withdrawal time information</li>
+      <li>Maintain accurate competition records</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Examples - Implementation Samples</h3>
+    <h3>Technology Vendors</h3>
     <ul>
-      <li><a href="samples/patient-example.json">Patient Example</a> - Complete equine patient record</li>
-      <li><a href="samples/observation-lameness.json">Lameness Observation</a> - AAEP lameness grading</li>
-      <li><a href="samples/observation-competition.json">Competition Score</a> - Reining pattern score</li>
-      <li><a href="samples/observation-training.json">Training Session</a> - Training activity record</li>
-      <li><a href="samples/observation-height.json">Height Measurement</a> - Body height measurement</li>
-      <li><a href="samples/immunization-example.json">Vaccination Record</a> - Immunization example</li>
-      <li><a href="samples/coggins-test.json">Coggins Test</a> - EIA test result</li>
-      <li><a href="samples/medication-administration.json">Medication Administration</a> - Drug administration with withdrawal</li>
+      <li>Build interoperable equine management systems</li>
+      <li>Integrate with existing veterinary and competition platforms</li>
+      <li>Achieve EQDS certification for your products</li>
     </ul>
+  </div>
+</div>
+
+---
+
+## Quick Links
+
+- [**Full Technical Specification**](specification) - Complete FHIR Implementation Guide
+- [**Certification Process**](certification) - Vendor compliance and certification *(Coming Soon)*
+- [**Certified Vendors**](vendors) - Directory of EQDS-compliant systems *(Coming Soon)*
+
+---
+
+## Call to Action
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Ready to Get Started?</h3>
+    <p><strong>For Implementers:</strong> Review the <a href="specification">full technical specification</a> to understand FHIR profiles, value sets, and conformance requirements.</p>
+    <p><strong>For Vendors:</strong> Learn about our certification process to ensure your system meets EQDS compliance standards.</p>
+    <p><strong>For End Users:</strong> Contact your software vendor to request EQDS support, or explore our directory of certified systems.</p>
   </div>
 
   <div class="card">
-    <h3>Value Sets</h3>
+    <h3>Join the Community</h3>
     <ul>
-      <li><a href="valuesets/equine-sex.json">Equine Sex ValueSet</a></li>
-      <li><a href="valuesets/breed-codes.json">Breed Codes ValueSet</a></li>
-      <li><a href="valuesets/competition-organizations.json">Competition Organizations ValueSet</a></li>
+      <li><strong>Email:</strong> equinedatastandard@gmail.com</li>
+      <li><strong>Website:</strong> https://eqds.org</li>
+      <li><strong>GitHub:</strong> https://github.com/EQDS</li>
     </ul>
+    <p>Pull requests and community contributions are welcome. Help us build the future of equine data interoperability.</p>
   </div>
+</div>
 
+---
+
+## What EQDS Includes
+
+<div class="resource-cards">
   <div class="card">
-    <h3>Search Parameters</h3>
+    <h3>Complete FHIR Implementation</h3>
+    <p>EQDS provides a comprehensive FHIR R5 implementation designed specifically for equine healthcare:</p>
     <ul>
-      <li><a href="searchparameters/patient-breed.json">Patient Breed Search</a></li>
-      <li><a href="searchparameters/patient-microchip.json">Patient Microchip Search</a></li>
-      <li><a href="searchparameters/patient-owner.json">Patient Owner Search</a></li>
+      <li><strong>7 Resource Profiles</strong> - Patient, Observation, Medication Administration, Immunization, Procedure, Practitioner, Organization</li>
+      <li><strong>6 Code Systems</strong> - Equine sex, breeds, colors, disciplines, competition organizations, medications</li>
+      <li><strong>5 Extensions</strong> - Ownership, breeding info, color, withdrawal times, vaccination schedules</li>
+      <li><strong>8+ Examples</strong> - Complete implementation samples covering clinical care, competition, and training scenarios</li>
+      <li><strong>Value Sets & Search Parameters</strong> - Standardized terminology and query capabilities</li>
     </ul>
+    <p><strong><a href="specification">→ View complete technical specifications and download all resources</a></strong></p>
   </div>
 </div>

@@ -7,7 +7,9 @@
       "Bash(bundle exec jekyll serve:*)",
       "Bash(bundle install:*)",
       "WebFetch(domain:docs.github.com)",
-      "WebFetch(domain:pages-themes.github.io)"
+      "WebFetch(domain:pages-themes.github.io)",
+      "WebFetch(domain:jekyllrb.com)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

@@ -17,61 +17,24 @@ description: Complete FHIR Implementation Guide for Equine Healthcare
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Scope and Purpose](#scope-and-purpose)
-3. [Conformance Requirements](#conformance-requirements)
-4. [Resource Profiles](#resource-profiles)
-5. [Extensions](#extensions)
-6. [Terminologies](#terminologies)
+2. [Conformance Requirements](#conformance-requirements)
+3. [Resource Profiles](#resource-profiles)
+4. [Extensions](#extensions)
+5. [Terminologies](#terminologies)
+6. [Value Sets](#value-sets)
 7. [Security Considerations](#security-considerations)
-8. [Examples](#examples)
-9. [Implementation Notes](#implementation-notes)
+8. [Exchange Rules](#exchange-rules)
+9. [Examples](#examples)
+10. [Implementation Guidance](#implementation-guidance)
+11. [Appendices](#appendices)
 
 ---
 
 ## Introduction
 
-The FHIR Implementation Guide for Equine Healthcare (Equine Data Standard) defines a set of conformance requirements for systems exchanging equine health information. This guide extends the base FHIR R5 specification to address the unique requirements of equine healthcare, including multi-owner structures, competition records, training data, and breeding information.
+This is the complete technical specification for the Equine Data Standard (EQDS). For background information, use cases, and audience details, please see the [EQDS homepage](index).
 
-<div class="resource-cards">
-  <div class="card">
-    <h3>Background - Equine Healthcare Challenges</h3>
-    <ul>
-      <li>Complex ownership structures with fractional ownership</li>
-      <li>Integration of performance and competition data with health records</li>
-      <li>Breeding and genetic lineage tracking</li>
-      <li>Discipline-specific training and conditioning metrics</li>
-      <li>Regulatory requirements for competition and interstate movement</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Built Upon These Standards</h3>
-    <ul>
-      <li>HL7 FHIR R5 base specification</li>
-      <li>SNOMED CT Veterinary Extension (VetSCT)</li>
-      <li>AAHA Problem and Diagnosis Terms</li>
-      <li>AVMA veterinary informatics standards</li>
-      <li>FEI (Fédération Équestre Internationale) competition standards</li>
-    </ul>
-  </div>
-</div>
-
----
-
-## Scope and Purpose
-
-<div class="resource-cards">
-  <div class="card">
-    <h3>Use Cases</h3>
-    <ul>
-      <li><strong>Clinical Care</strong> - Recording and sharing veterinary examinations, treatments, and procedures</li>
-      <li><strong>Competition Management</strong> - Tracking fitness-for-competition, drug withdrawal times, and performance records</li>
-      <li><strong>Breeding Operations</strong> - Managing reproductive health, genetic testing, and lineage</li>
-      <li><strong>Training Programs</strong> - Documenting training sessions, conditioning, and performance metrics</li>
-      <li><strong>Regulatory Compliance</strong> - Supporting Coggins testing, health certificates, and movement tracking</li>
-    </ul>
-  </div>
-</div>
+This Implementation Guide defines conformance requirements for systems exchanging equine health information using HL7® FHIR® R5. It specifies profiles, extensions, terminologies, and exchange patterns specifically designed for equine healthcare interoperability.
 
 ### Out of Scope
 
@@ -245,7 +208,13 @@ The Ownership Extension supports fractional ownership with validation that owner
       <li><a href="codesystems/veterinary-medications.json">Veterinary Medications</a> - Common equine medications</li>
     </ul>
   </div>
-  
+</div>
+
+---
+
+## Value Sets
+
+<div class="resource-cards">
   <div class="card">
     <h3>Value Sets</h3>
     <ul>
@@ -320,27 +289,7 @@ Implementation SHALL use OAuth 2.0 with SMART-on-FHIR for authentication and aut
 
 ---
 
-## Examples
-
-<div class="resource-cards">
-  <div class="card">
-    <h3>Examples - Implementation Samples</h3>
-    <ul>
-      <li><a href="samples/patient-example.json">Patient Example</a> - Complete equine patient record with ownership and breeding information</li>
-      <li><a href="samples/observation-lameness.json">Lameness Observation</a> - AAEP lameness grading example</li>
-      <li><a href="samples/observation-competition.json">Competition Score</a> - Reining pattern score with maneuver breakdown</li>
-      <li><a href="samples/observation-training.json">Training Session</a> - Training activity documentation</li>
-      <li><a href="samples/observation-height.json">Height Measurement</a> - Body height in hands and centimeters</li>
-      <li><a href="samples/immunization-example.json">Vaccination Record</a> - Equine influenza vaccination</li>
-      <li><a href="samples/coggins-test.json">Coggins Test</a> - EIA test diagnostic report</li>
-      <li><a href="samples/medication-administration.json">Medication Administration</a> - Phenylbutazone with USEF withdrawal time</li>
-    </ul>
-  </div>
-</div>
-
----
-
-## Implementation Notes
+## Exchange Rules
 
 ### RESTful API
 
@@ -379,6 +328,59 @@ GET [base]/Observation?subject=Patient/horse-123&category=training
 ### Document Exchange
 
 The specification supports document-based exchange using FHIR Bundle resources for health certificates, competition records, and comprehensive medical records.
+
+---
+
+## Examples
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Examples - Implementation Samples</h3>
+    <ul>
+      <li><a href="samples/patient-example.json">Patient Example</a> - Complete equine patient record with ownership and breeding information</li>
+      <li><a href="samples/observation-lameness.json">Lameness Observation</a> - AAEP lameness grading example</li>
+      <li><a href="samples/observation-competition.json">Competition Score</a> - Reining pattern score with maneuver breakdown</li>
+      <li><a href="samples/observation-training.json">Training Session</a> - Training activity documentation</li>
+      <li><a href="samples/observation-height.json">Height Measurement</a> - Body height in hands and centimeters</li>
+      <li><a href="samples/immunization-example.json">Vaccination Record</a> - Equine influenza vaccination</li>
+      <li><a href="samples/coggins-test.json">Coggins Test</a> - EIA test diagnostic report</li>
+      <li><a href="samples/medication-administration.json">Medication Administration</a> - Phenylbutazone with USEF withdrawal time</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+## Implementation Guidance
+
+### Best Practices
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Implementation Recommendations</h3>
+    <ul>
+      <li><strong>Patient Identity</strong> - Always include microchip identifier when available for reliable matching</li>
+      <li><strong>Ownership Tracking</strong> - Use the ownership extension to maintain current and historical ownership records</li>
+      <li><strong>Competition Data</strong> - Link competition observations to specific events and organizations</li>
+      <li><strong>Medication Tracking</strong> - Always include withdrawal times for competition-relevant medications</li>
+      <li><strong>Training Records</strong> - Use consistent observation categories and coding for training metrics</li>
+    </ul>
+  </div>
+</div>
+
+### Data Quality Guidelines
+
+<div class="resource-cards">
+  <div class="card">
+    <h3>Data Quality Requirements</h3>
+    <ul>
+      <li><strong>Identifiers</strong> - Validate registration numbers against breed registry formats</li>
+      <li><strong>Dates</strong> - Use precise dates for vaccinations, procedures, and competition events</li>
+      <li><strong>Terminologies</strong> - Prefer coded values over free text where value sets exist</li>
+      <li><strong>References</strong> - Maintain referential integrity between related resources</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
