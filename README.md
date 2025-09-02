@@ -31,6 +31,14 @@ Visit **[eqds.org](https://eqds.org)** for the complete specification, examples,
 ├── valuesets/                  FHIR ValueSets
 ├── extensions/                 FHIR Extensions
 └── searchparameters/           FHIR SearchParameters
+
+/tools                          Developer tooling (NEW!)
+├── schema-generator/           Converts FHIR profiles to JSON Schemas
+├── eqds-schemas/               Generated JSON Schemas
+├── eqds-typescript/            TypeScript SDK
+├── eqds-python/                Python SDK (coming soon)
+├── eqds-cli/                   CLI validator (coming soon)
+└── eqds-playground/            Web playground (coming soon)
 ```
 
 ## What is EQDS?
@@ -46,13 +54,14 @@ EQDS defines FHIR R5-based profiles, value sets, and exchange rules for:
 
 ### For Implementers
 1. Review the [full specification](https://eqds.org/specification)
-2. Download relevant [profiles](https://eqds.org/profiles/) for your use case
-3. Use [example resources](https://eqds.org/samples/) as implementation guides
-4. Validate against FHIR R5 and EQDS profiles
+2. **NEW:** Use our [TypeScript SDK](#typescript-sdk) for rapid development
+3. Download relevant [profiles](https://eqds.org/profiles/) for your use case
+4. Use [example resources](https://eqds.org/samples/) as implementation guides
+5. Validate against FHIR R5 and EQDS profiles
 
 ### For Vendors
-1. Implement EQDS profiles in your system
-2. Validate your implementation with provided examples
+1. Implement EQDS profiles in your system using our developer tools
+2. Validate your implementation with provided examples and SDK
 3. Apply for [certification](https://eqds.org/certification)
 4. Get listed as a [certified vendor](https://eqds.org/vendors)
 
@@ -63,6 +72,68 @@ EQDS defines FHIR R5-based profiles, value sets, and exchange rules for:
 - **Flexible ownership**: Supports fractional and complex ownership structures  
 - **Competition-ready**: Includes drug withdrawal times and fitness evaluations
 - **Extensible**: Designed for future enhancement and specialization
+
+## Developer Tooling 🛠️
+
+### TypeScript SDK
+
+The TypeScript SDK provides type-safe EQDS resource creation and validation:
+
+```typescript
+import { createEqdsPatient, assertEqdsPatient } from '@eqds/typescript';
+
+// Create a valid EQDS patient
+const patient = createEqdsPatient({
+  id: 'horse-123',
+  name: 'Thunder Strike',
+  genderStatus: 'mare',
+  breed: 'QH', // Quarter Horse
+  color: 'bay',
+  owners: [
+    { reference: 'RelatedPerson/owner-1', percentage: 60 },
+    { reference: 'RelatedPerson/owner-2', percentage: 40 }
+  ]
+});
+
+// Validate the patient
+assertEqdsPatient(patient); // Throws if invalid
+```
+
+**Features:**
+- ✅ **Type Safety**: Full TypeScript types generated from FHIR profiles
+- ✅ **Business Rules**: Automatic validation (ownership must sum to 100%, species = Horse)
+- ✅ **Code Systems**: Constants for breeds, colors, and equine sex from actual EQDS CodeSystems
+- ✅ **Factory Functions**: Easy creation with sensible defaults and validation
+- ✅ **Utility Functions**: Extract ownership info, animal data, breeding info
+
+### JSON Schemas
+
+Generated directly from the official FHIR StructureDefinitions:
+
+```bash
+# Build the schemas from FHIR profiles
+cd tools/schema-generator
+npm run generate
+
+# Use the schemas (in tools/eqds-schemas/schemas/)
+```
+
+### Getting Started with Developer Tools
+
+```bash
+# Install dependencies (requires pnpm)
+pnpm install
+
+# Generate schemas from FHIR profiles  
+pnpm run generate:schemas
+
+# Build TypeScript SDK
+cd tools/eqds-typescript
+npm run build
+
+# Run tests
+npm test
+```
 
 ## FHIR Resources
 

@@ -59,6 +59,8 @@ navigation:
     link: /
   - name: Specification
     link: /specification
+  - name: Developer Tools
+    link: /developer-tools
   - name: Certification
     link: /certification
   - name: Vendors

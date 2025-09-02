@@ -6,6 +6,15 @@ description: Complete FHIR Implementation Guide for Equine Healthcare
 
 # FHIR Implementation Guide for Equine Healthcare (Equine Data Standard)
 
+## Navigation
+
+- [**🛠️ Developer Tools**](developer-tools) - TypeScript SDK, JSON Schemas, and validation tools
+- [**JSON Schemas**](json-schemas) - Generated schemas for validation
+- [**TypeScript SDK**](typescript-sdk) - Type-safe creation and validation
+- [**Homepage**](index) - Return to EQDS homepage
+
+---
+
 **Version:** 1.0.2  
 **Status:** Draft  
 **Date:** 2025-08-27  

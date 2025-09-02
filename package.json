@@ -1,0 +1,37 @@
+{
+  "name": "eqds-spec",
+  "version": "1.1.0",
+  "description": "Equine Data Standard (EQDS) - Specification and Developer Tooling",
+  "private": true,
+  "workspaces": [
+    "tools/*"
+  ],
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "clean": "pnpm -r clean",
+    "generate:schemas": "cd tools/schema-generator && npm run generate",
+    "dev:playground": "cd tools/eqds-playground && npm run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "equine",
+    "healthcare",
+    "fhir",
+    "interoperability",
+    "json-schema",
+    "eqds"
+  ],
+  "author": "Equine Data Standard (EQDS)",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EQDS/eqds-spec"
+  },
+  "homepage": "https://eqds.org"
+}

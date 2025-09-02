@@ -23,9 +23,10 @@ EQDS enables **consistent, interoperable data exchange across the equine industr
 
 ---
 
-## Quick Links
+## Navigation
 
 - [**Full Technical Specification**](specification) - Complete FHIR Implementation Guide
+- [**Developer Tools**](developer-tools) - TypeScript SDK, JSON Schemas, and validation tools
 - [**Expanded JSON Specification**](expanded-json-spec) - All examples expanded with detailed JSON schemas
 - [**Certification Process**](certification) - Vendor compliance and certification *(Coming Soon)*
 - [**Certified Vendors**](vendors) - Directory of EQDS-compliant systems *(Coming Soon)*
@@ -145,6 +146,41 @@ EQDS enables **consistent, interoperable data exchange across the equine industr
       <li><strong>GitHub:</strong> https://github.com/EQDS</li>
     </ul>
     <p>Pull requests and community contributions are welcome. Help us build the future of equine data interoperability.</p>
+  </div>
+</div>
+
+---
+
+## 🛠️ Developer Tools (NEW!)
+
+<div class="resource-cards">
+  <div class="card">
+    <h3><a href="developer-tools">🚀 Get Started Fast</a></h3>
+    <p>Ready-to-use developer tools make EQDS implementation simple:</p>
+    <ul>
+      <li><strong><a href="typescript-sdk">TypeScript SDK</a></strong> - Type-safe resource creation and validation</li>
+      <li><strong><a href="json-schemas">JSON Schemas</a></strong> - Validate resources with any JSON Schema tool</li>
+      <li><strong>Business Rule Validation</strong> - Automatic ownership ≈100%, species=Horse enforcement</li>
+      <li><strong>Code System Constants</strong> - All EQDS terminologies as typed constants</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>💻 Quick Example</h3>
+    <pre><code>// Create a valid EQDS patient in TypeScript
+const patient = createEqdsPatient({
+  id: 'horse-1',
+  name: 'Thunder',
+  genderStatus: 'mare',
+  breed: 'QH', // Quarter Horse
+  owners: [
+    { reference: 'Owner/1', percentage: 100 }
+  ]
+});
+
+// Automatically validated!
+assertEqdsPatient(patient);</code></pre>
+    <p><strong><a href="developer-tools">→ Explore All Tools</a></strong></p>
   </div>
 </div>
 

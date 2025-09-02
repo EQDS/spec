@@ -1,0 +1,37 @@
+{
+  "name": "@eqds/typescript",
+  "version": "1.1.0",
+  "description": "TypeScript SDK for the Equine Data Standard (EQDS)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1"
+  },
+  "devDependencies": {
+    "@eqds/schemas": "workspace:*",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.0"
+  },
+  "keywords": [
+    "eqds",
+    "typescript",
+    "sdk",
+    "fhir",
+    "equine"
+  ],
+  "author": "Equine Data Standard (EQDS)",
+  "license": "CC0-1.0"
+}
