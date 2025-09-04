@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JSON Schemas - EQDS
+title: JSON Schemas - EQDS.org
 description: JSON Schemas generated from EQDS FHIR StructureDefinitions
 ---
 

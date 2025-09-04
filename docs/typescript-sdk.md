@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TypeScript SDK - EQDS
+title: TypeScript SDK - EQDS.org
 description: TypeScript SDK for the Equine Data Standard with types and validation
 ---
 

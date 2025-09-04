@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Developer Tools - EQDS
+title: Developer Tools - EQDS.org
 description: Developer tools and SDKs for implementing the Equine Data Standard
 ---
 
